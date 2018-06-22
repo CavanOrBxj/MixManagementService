@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<moduleinfo>
+  <module id="4" name="压缩" location="D:\Program Files\WinRAR\WinRAR.exe" state="0" autostart="0" delay="0" />
+  <module id="2" name="迅雷" location="D:\Program Files (x86)\Thunder Network\Thunder9\Program\Thunder.exe" state="1" autostart="0" delay="0" />
+  <module id="3" name="命令行" location="C:\Windows\system32\cmd.exe" state="0" autostart="0" delay="2" />
+  <module id="1" name="接驳器测试" location="D:\ASTRO\VSworkspace\PhoneTester\PhoneTester\bin\Release\PhoneTester.exe" state="0" autostart="0" delay="5" />
+</moduleinfo>

@@ -1,0 +1,7 @@
+D:\ProjectDoc\revision\WindowsServerDemo\MSMQChatService\MSMQChatService\bin\Debug\MSMQChatService.exe.config
+D:\ProjectDoc\revision\WindowsServerDemo\MSMQChatService\MSMQChatService\obj\Debug\MSMQChatService.ServiceInstaller.resources
+D:\ProjectDoc\revision\WindowsServerDemo\MSMQChatService\MSMQChatService\obj\Debug\MSMQChatService.csproj.GenerateResource.Cache
+D:\ProjectDoc\revision\WindowsServerDemo\MSMQChatService\MSMQChatService\bin\Debug\MSMQChatService.exe
+D:\ProjectDoc\revision\WindowsServerDemo\MSMQChatService\MSMQChatService\bin\Debug\MSMQChatService.pdb
+D:\ProjectDoc\revision\WindowsServerDemo\MSMQChatService\MSMQChatService\obj\Debug\MSMQChatService.exe
+D:\ProjectDoc\revision\WindowsServerDemo\MSMQChatService\MSMQChatService\obj\Debug\MSMQChatService.pdb

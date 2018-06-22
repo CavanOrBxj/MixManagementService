@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BAF34C54-34B5-4347-9A79-984CF6AE5262}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MixManagementPlatform</RootNamespace>
+    <AssemblyName>MixManagementPlatform</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>tunan.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ControlAstro, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ControlAstro.dll</HintPath>
+    </Reference>
+    <Reference Include="Dos.Common, Version=1.0.9.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Dos.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Dos.ORM, Version=1.10.7.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Dos.ORM.dll</HintPath>
+    </Reference>
+    <Reference Include="Dos.ORM.Sqlite, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Dos.ORM.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="IPAddressControlLib, Version=1.0.3038.14400, Culture=neutral, PublicKeyToken=9695e912950a5d9b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IPAddressControlLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.105.1, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppConfigurator.cs" />
+    <Compile Include="Controls\DataGridViewDragSort.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\DataGridViewStateColumn.cs" />
+    <Compile Include="Controls\SeparatorLine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SeparatorLine.Designer.cs">
+      <DependentUpon>SeparatorLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TipPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TipPanel.designer.cs">
+      <DependentUpon>TipPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModule\Module.cs" />
+    <Compile Include="SingletonInfo.cs" />
+    <Compile Include="FrmServiceSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmServiceSetup.Designer.cs">
+      <DependentUpon>FrmServiceSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartForm.Designer.cs">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDataBaseConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataBaseConfig.Designer.cs">
+      <DependentUpon>FormDataBaseConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModule.Designer.cs">
+      <DependentUpon>FormModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModuleConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModuleConfig.Designer.cs">
+      <DependentUpon>FormModuleConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOverInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOverInfo.Designer.cs">
+      <DependentUpon>FormOverInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStartIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStartIndex.Designer.cs">
+      <DependentUpon>FormStartIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\CmdServerConfigLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Layouts\CmdServerConfigLayout.Designer.cs">
+      <DependentUpon>CmdServerConfigLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\DemultiplexConfigLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Layouts\DemultiplexConfigLayout.Designer.cs">
+      <DependentUpon>DemultiplexConfigLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\RecordConfigLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Layouts\RecordConfigLayout.Designer.cs">
+      <DependentUpon>RecordConfigLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\TomcatServerConfigLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Layouts\TomcatServerConfigLayout.Designer.cs">
+      <DependentUpon>TomcatServerConfigLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\TsSheduleCenterConfigLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Layouts\TsSheduleCenterConfigLayout.Designer.cs">
+      <DependentUpon>TsSheduleCenterConfigLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogAPI.cs" />
+    <Compile Include="MixLogHelper.cs" />
+    <Compile Include="ProcessHelper\WMIProcessInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceAPI.cs" />
+    <Compile Include="Settings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SQLiteHelper.cs" />
+    <Compile Include="SqlManager\DB.cs" />
+    <Compile Include="SqlManager\SqliteLogic.cs" />
+    <Compile Include="SqlManager\SqlServerLogic.cs" />
+    <Compile Include="SqlManager\TModuleLogic.cs" />
+    <Compile Include="Utils\IniFileOperator.cs" />
+    <Compile Include="Utils\PropertyFileOperator.cs" />
+    <EmbeddedResource Include="Controls\TipPanel.resx">
+      <DependentUpon>TipPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmServiceSetup.resx">
+      <DependentUpon>FrmServiceSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartForm.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDataBaseConfig.resx">
+      <DependentUpon>FormDataBaseConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModule.resx">
+      <DependentUpon>FormModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModuleConfig.resx">
+      <DependentUpon>FormModuleConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOverInfo.resx">
+      <DependentUpon>FormOverInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStartIndex.resx">
+      <DependentUpon>FormStartIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\CmdServerConfigLayout.resx">
+      <DependentUpon>CmdServerConfigLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\DemultiplexConfigLayout.resx">
+      <DependentUpon>DemultiplexConfigLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\RecordConfigLayout.resx">
+      <DependentUpon>RecordConfigLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\TomcatServerConfigLayout.resx">
+      <DependentUpon>TomcatServerConfigLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\TsSheduleCenterConfigLayout.resx">
+      <DependentUpon>TsSheduleCenterConfigLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\add.png" />
+    <Content Include="Resources\down.png" />
+    <Content Include="Resources\ImgCopy.png" />
+    <Content Include="Resources\ImgCopy1.png" />
+    <Content Include="Resources\ImgMove.png" />
+    <Content Include="Resources\ImgMove1.png" />
+    <Content Include="Resources\login-2.png" />
+    <Content Include="Resources\tunan.ico" />
+    <Content Include="Resources\up.png" />
+    <Content Include="Resources\upaopai.ico" />
+    <Content Include="tunan.ico" />
+    <Content Include="upaopai.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

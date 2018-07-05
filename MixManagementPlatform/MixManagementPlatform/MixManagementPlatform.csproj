@@ -95,6 +95,18 @@
       <DependentUpon>TipPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="EntityModule\Module.cs" />
+    <Compile Include="Layouts\ReturnserviceConfigLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Layouts\ReturnserviceConfigLayout.Designer.cs">
+      <DependentUpon>ReturnserviceConfigLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\InstructionServicesConfigLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Layouts\InstructionServicesConfigLayout.Designer.cs">
+      <DependentUpon>InstructionServicesConfigLayout.cs</DependentUpon>
+    </Compile>
     <Compile Include="SingletonInfo.cs" />
     <Compile Include="FrmServiceSetup.cs">
       <SubType>Form</SubType>
@@ -195,6 +207,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmServiceSetup.resx">
       <DependentUpon>FrmServiceSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\ReturnserviceConfigLayout.resx">
+      <DependentUpon>ReturnserviceConfigLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\InstructionServicesConfigLayout.resx">
+      <DependentUpon>InstructionServicesConfigLayout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>

@@ -1,0 +1,2767 @@
+USE [volador]
+/****** 对象:  Table [dbo].[Sensitive]    脚本日期: 07/31/2017 11:16:39 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Sensitive](
+	[ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[WORDS] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[AreaGroupDetail]    脚本日期: 07/31/2017 11:14:43 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[AreaGroupDetail](
+	[AreaGroup_ID] [int] NOT NULL,
+	[AreaGroup_DCode] [varchar](50) NOT NULL,
+	[AreaGroup_DDetail] [varchar](50) NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[PhoneInfo]    脚本日期: 07/31/2017 11:16:19 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[PhoneInfo](
+	[PH_ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[PH_UserName] [varchar](255) NULL,
+	[PH_Code] [varchar](255) NULL,
+	[PH_AreaCode] [varchar](255) NULL,
+	[PH_PIDVALUE] [int] NULL,
+	[PH_Pwd] [varchar](255) NULL,
+	[PH_LastDate] [datetime] NULL,
+	[PH_Priority] [int] NULL,
+	[PH_Note] [varchar](255) NULL,
+	[PH_AreaDetail] [varchar](50) NULL,
+ CONSTRAINT [PK__PhoneInfo__01D345B0] PRIMARY KEY CLUSTERED 
+(
+	[PH_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[AreaGroupHead]    脚本日期: 07/31/2017 11:14:44 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[AreaGroupHead](
+	[AreaGroup_ID] [int] IDENTITY(1,1) NOT NULL,
+	[AreaGroup_Name] [varchar](200) NOT NULL,
+	[AreaGroup_OperatorCode] [varchar](50) NULL,
+	[AreaGroup_Operator] [varchar](50) NULL,
+	[AreaGroup_Time] [datetime] NULL,
+	[AreaGroup_MTime] [datetime] NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[BCInsert]    脚本日期: 07/31/2017 11:14:46 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[BCInsert](
+	[BCInsert_ID] [int] IDENTITY(1,1) NOT NULL,
+	[BCInsert_Type] [varchar](50) NULL,
+	[BCInsert_Class] [varchar](50) NULL,
+	[BCInsert_Code] [varchar](50) NULL,
+	[BCInsert_Detail] [varchar](50) NULL,
+	[BCInsert_IP] [varchar](50) NULL,
+	[BCInsert_Status] [varchar](50) NULL,
+	[BCInsert_StartTime] [varchar](50) NULL,
+	[BCInsert_EndTime] [varchar](50) NULL,
+	[BCInsert_FileName] [varchar](500) NULL,
+	[BCInsert_Operator] [varchar](50) NULL,
+	[BCInsert_OperatorCode] [varchar](50) NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[BOUNDARY]    脚本日期: 07/31/2017 11:14:47 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[BOUNDARY](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[ORGID] [numeric](19, 0) NULL,
+	[POINTS] [varchar](8000) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[brcTemplate]    脚本日期: 07/31/2017 11:14:48 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[brcTemplate](
+	[id] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[NAME] [varchar](255) NULL,
+	[presetMode] [varchar](255) NULL,
+	[accessWay] [varchar](255) NULL,
+	[areaCodes] [varchar](255) NULL,
+	[auditStatus] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[TSCMDSTORE]    脚本日期: 07/31/2017 11:17:18 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[TSCMDSTORE](
+	[TsCmd_ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[TsCmd_Type] [varchar](255) NULL,
+	[TsCmd_Mode] [varchar](255) NULL,
+	[TsCmd_UserID] [int] NULL,
+	[TsCmd_ValueID] [varchar](255) NULL,
+	[TsCmd_Params] [varchar](1000) NULL,
+	[TsCmd_Note] [varchar](255) NULL,
+	[TsCmd_Date] [datetime] NULL,
+	[TsCmd_Status] [int] NULL,
+	[TsCmd_Excute] [varchar](255) NULL,
+	[TsCmd_PlayCount] [varchar](50) NULL,
+	[TsCmd_ExcuteTime] [datetime] NULL,
+	[TsCmd_SaveTime] [datetime] NULL,
+	[TsCmd_EndTime] [datetime] NULL,
+ CONSTRAINT [PK__TSCMDSTORE__14E61A24] PRIMARY KEY CLUSTERED 
+(
+	[TsCmd_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[ch_platformdevicetype]    脚本日期: 07/31/2017 11:14:58 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[ch_platformdevicetype](
+	[SRV_ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[SRV_DETAIL] [varchar](255) NULL,
+	[SRV_CODE] [varchar](255) NULL,
+	[SRV_MFT_CODE] [varchar](255) NULL,
+	[SRV_TYPE] [varchar](255) NULL,
+	[SRV_HDW_VERSION] [varchar](255) NULL,
+	[SRV_SFW_VERSION] [varchar](255) NULL,
+	[SRV_PWR] [varchar](255) NULL,
+	[SRV_AMP] [varchar](255) NULL,
+	[SRV_RF_LEVEL] [varchar](255) NULL,
+	[description] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[SRV_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[ch_privilege]    脚本日期: 07/31/2017 11:14:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[ch_privilege](
+	[id] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[url] [varchar](255) NULL,
+	[name] [varchar](255) NULL,
+	[icon] [varchar](255) NULL,
+	[parentId] [numeric](19, 0) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[ch_programManage]    脚本日期: 07/31/2017 11:15:00 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[ch_programManage](
+	[ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[NAME] [varchar](255) NULL,
+	[PID] [numeric](19, 0) NULL,
+	[NOTE] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[ch_remotedevice]    脚本日期: 07/31/2017 11:15:01 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[ch_remotedevice](
+	[ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[NAME] [varchar](255) NULL,
+	[SRV_PHYSICAL_CODE] [varchar](255) NULL,
+	[SRV_MFT_DATE] [datetime] NULL,
+	[STATUS] [varchar](255) NULL,
+	[DESCRIPTION] [varchar](255) NULL,
+	[srv_mft_code] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[ch_role]    脚本日期: 07/31/2017 11:15:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[ch_role](
+	[id] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[name] [varchar](255) NULL,
+	[description] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[ch_department]    脚本日期: 07/31/2017 11:14:53 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[ch_department](
+	[id] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[name] [varchar](255) NULL,
+	[description] [varchar](255) NULL,
+	[parentId] [numeric](19, 0) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[ch_loginlog]    脚本日期: 07/31/2017 11:14:54 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[ch_loginlog](
+	[ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[userName] [varchar](255) NULL,
+	[clientIP] [varchar](255) NULL,
+	[status] [varchar](255) NULL,
+	[createTime] [datetime] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[ch_parameterchangelog]    脚本日期: 07/31/2017 11:14:55 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[ch_parameterchangelog](
+	[id] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[userName] [varchar](255) NULL,
+	[clientIP] [varchar](255) NULL,
+	[operation] [varchar](255) NULL,
+	[oldValue] [varchar](255) NULL,
+	[newValue] [varchar](255) NULL,
+	[changeTime] [datetime] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[CommandOperate]    脚本日期: 07/31/2017 11:15:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[CommandOperate](
+	[CMD_ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[CMD_GROUP] [varchar](255) NULL,
+	[CMD_TYPE] [varchar](255) NULL,
+	[CMD_STT_TIME] [datetime] NULL,
+	[CMD_ORG] [varchar](255) NULL,
+	[CMD_DETAIL] [varchar](255) NULL,
+	[CMD_Priority] [varchar](255) NULL,
+	[CMD_FLAG] [varchar](255) NULL,
+	[CMD_PID] [numeric](19, 0) NULL,
+	[CMD_USERID] [numeric](19, 0) NULL,
+	[CMD_STOP_TIME] [datetime] NULL,
+	[CMD_PARENTID] [int] NULL,
+	[CMD_STATUS] [int] NULL,
+	[CMD_FLOWTYPE] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[CMD_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[ch_templateManage]    脚本日期: 07/31/2017 11:15:06 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[ch_templateManage](
+	[ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[NAME] [varchar](255) NULL,
+	[NOTE] [varchar](255) NULL,
+	[type] [varchar](255) NULL,
+	[areaPhyCodes] [varchar](255) NULL,
+	[userName] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[CommandFlows]    脚本日期: 07/31/2017 11:15:09 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[CommandFlows](
+	[CMD_ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[CMD_GROUP] [varchar](255) NULL,
+	[CMD_TYPE] [varchar](255) NULL,
+	[CMD_STT_TIME] [datetime] NULL,
+	[CMD_ORG] [varchar](255) NULL,
+	[CMD_DETAIL] [varchar](255) NULL,
+	[CMD_Priority] [varchar](255) NULL,
+	[CMD_FLAG] [varchar](255) NULL,
+	[CMD_PID] [numeric](19, 0) NULL,
+	[CMD_USERID] [numeric](19, 0) NULL,
+	[CMD_STOP_TIME] [datetime] NULL,
+	[CMD_PARENTID] [int] NULL,
+	[CMD_STATUS] [int] NULL,
+	[CMD_FLOWTYPE] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[CMD_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[CommandPool]    脚本日期: 07/31/2017 11:15:12 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[CommandPool](
+	[CMD_ID] [int] IDENTITY(1,1) NOT NULL,
+	[CMD_TIME] [datetime] NULL,
+	[CMD_BODY] [varchar](255) NULL,
+	[CMD_FLAG] [varchar](255) NULL,
+	[PLAT_TASKID] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[CMD_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[DailyReports]    脚本日期: 07/31/2017 11:15:17 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[DailyReports](
+	[DLY_RPT_ID] [int] IDENTITY(1,1) NOT NULL,
+	[DLY_RPT_TIME] [datetime] NULL,
+	[DLY_RPT_RMTTIME] [varchar](50) NULL,
+	[DLY_RPT_SUB] [varchar](50) NULL,
+	[DLY_RPT_CTX] [varchar](50) NULL,
+	[CITY_ORG_CODEA] [varchar](50) NULL,
+	[CITY_RATE] [varchar](50) NULL,
+	[CTY_ORG_CODEA1] [varchar](50) NULL,
+	[CTY_ORG_RATE1] [varchar](50) NULL,
+	[CTY_ORG_CODEA2] [varchar](50) NULL,
+	[CTY_ORG_RATE2] [varchar](50) NULL,
+	[CTY_ORG_CODEA3] [varchar](50) NULL,
+	[CTY_ORG_RATE3] [varchar](50) NULL,
+	[CTY_ORG_CODEA4] [varchar](50) NULL,
+	[CTY_ORG_RATE4] [varchar](50) NULL,
+	[CTY_ORG_CODEA5] [varchar](50) NULL,
+	[CTY_ORG_RATE5] [varchar](50) NULL,
+	[CTY_ORG_CODEA6] [varchar](50) NULL,
+	[CTY_ORG_RATE6] [varchar](50) NULL,
+	[CTY_ORG_CODEA7] [varchar](50) NULL,
+	[CTY_ORG_RATE7] [varchar](50) NULL,
+	[CTY_ORG_CODEA8] [varchar](50) NULL,
+	[CTY_ORG_RATE8] [varchar](50) NULL,
+	[CTY_ORG_CODEA9] [varchar](50) NULL,
+	[CTY_ORG_RATE9] [varchar](50) NULL,
+	[CTY_ORG_CODEA10] [varchar](50) NULL,
+	[CTY_ORG_RATE10] [varchar](50) NULL,
+	[CTY_ORG_CODEA11] [varchar](50) NULL,
+	[CTY_ORG_RATE11] [varchar](50) NULL,
+	[CTY_ORG_CODEA12] [varchar](50) NULL,
+	[CTY_ORG_RATE12] [varchar](50) NULL,
+	[CTY_ORG_CODEA13] [varchar](50) NULL,
+	[CTY_ORG_RATE13] [varchar](50) NULL,
+	[CTY_ORG_CODEA14] [varchar](50) NULL,
+	[CTY_ORG_RATE14] [varchar](50) NULL,
+	[CTY_ORG_CODEA15] [varchar](50) NULL,
+	[CTY_ORG_RATE15] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[DLY_RPT_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[DeviceAlarm]    脚本日期: 07/31/2017 11:15:19 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[DeviceAlarm](
+	[id] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[srv_physical_code] [varchar](50) NULL,
+	[orgCodea] [varchar](50) NULL,
+	[alarmInfo] [varchar](500) NULL,
+	[genTime] [datetime] NULL,
+	[handleTime] [datetime] NULL,
+	[handleStatus] [varchar](50) NULL,
+	[handleUser] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[DIGITIALMICRO]    脚本日期: 07/31/2017 11:15:21 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[DIGITIALMICRO](
+	[DG_MICROID] [int] IDENTITY(1,1) NOT NULL,
+	[DG_PHYSICAL_CODE] [varchar](50) NULL,
+	[DG_LOGICAL_CODE] [varchar](50) NULL,
+	[DG_IP] [varchar](50) NULL,
+	[DG_COLLECT_MODE] [varchar](50) NULL,
+	[DG_SINGLE_NO] [int] NULL,
+	[DG_AREA_CODE] [varchar](50) NULL,
+	[DG_HEART_LAST] [datetime] NULL,
+	[DG_HEART_GAP] [int] NULL,
+	[DG_LEVEL] [int] NULL,
+	[DG_PASS] [varchar](50) NULL,
+	[DG_AREA_Detail] [varchar](50) NULL,
+	[DG_NotUse] [bit] NULL DEFAULT ((0)),
+	[DG_ValidMode] [int] NULL DEFAULT ((0))
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'物理编码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'DIGITIALMICRO', @level2type=N'COLUMN',@level2name=N'DG_PHYSICAL_CODE'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'逻辑编码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'DIGITIALMICRO', @level2type=N'COLUMN',@level2name=N'DG_LOGICAL_CODE'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'IP地址' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'DIGITIALMICRO', @level2type=N'COLUMN',@level2name=N'DG_IP'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'采集模式：实时采集、插播采集' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'DIGITIALMICRO', @level2type=N'COLUMN',@level2name=N'DG_COLLECT_MODE'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'独占通道号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'DIGITIALMICRO', @level2type=N'COLUMN',@level2name=N'DG_SINGLE_NO'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'绑定区域' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'DIGITIALMICRO', @level2type=N'COLUMN',@level2name=N'DG_AREA_CODE'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'最后一次心跳时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'DIGITIALMICRO', @level2type=N'COLUMN',@level2name=N'DG_HEART_LAST'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'心跳间隔' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'DIGITIALMICRO', @level2type=N'COLUMN',@level2name=N'DG_HEART_GAP'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'优先级' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'DIGITIALMICRO', @level2type=N'COLUMN',@level2name=N'DG_LEVEL'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'控制台密码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'DIGITIALMICRO', @level2type=N'COLUMN',@level2name=N'DG_PASS'
+GO
+/****** 对象:  Table [dbo].[dtproperties]    脚本日期: 07/31/2017 11:15:22 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[dtproperties](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[objectid] [int] NULL,
+	[property] [varchar](64) NOT NULL,
+	[value] [varchar](255) NULL,
+	[uvalue] [nvarchar](255) NULL,
+	[lvalue] [image] NULL,
+	[version] [int] NOT NULL DEFAULT ((0)),
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC,
+	[property] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[FileCheck]    脚本日期: 07/31/2017 11:15:27 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[FileCheck](
+	[FileCheck_ID] [int] IDENTITY(1,1) NOT NULL,
+	[FileCheck_Name] [varchar](300) NULL,
+	[FileCheck_Time] [datetime] NULL,
+	[FileCheck_Operator] [varchar](50) NULL,
+	[FileCheck_OperatorCode] [varchar](50) NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[LEDTXT]    脚本日期: 07/31/2017 11:15:47 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[LEDTXT](
+	[LEDTXT_ID] [int] IDENTITY(1,1) NOT NULL,
+	[LEDTXT_APMT_TIME] [datetime] NULL,
+	[LEDTXT_TYPE] [varchar](50) NULL,
+	[LEDTXT_TOPIC] [varchar](50) NULL,
+	[LEDTXT_BODY] [varchar](1024) NULL,
+	[LEDTXT_LIST] [varchar](1024) NULL,
+	[ORG_CODEA] [varchar](50) NULL,
+	[ORG_Detail] [varchar](50) NULL,
+	[SRV_PHYSICAL_CODE] [varchar](50) NULL,
+	[USER_CODE_edit] [varchar](50) NULL,
+	[Edit_TIME] [datetime] NULL,
+	[FlashType] [varchar](50) NULL,
+	[ShowRate] [varchar](50) NULL,
+	[StayTime] [varchar](50) NULL,
+	[USER_CODE_audit] [varchar](50) NULL,
+	[Audit_TIME] [datetime] NULL,
+	[USER_CODE_approval] [varchar](50) NULL,
+	[Approval_TIME] [datetime] NULL,
+	[LEDTXT_SENT_TIME] [datetime] NULL,
+	[LEDTXT_FLAG1] [varchar](50) NULL,
+	[LEDTXT_FLAG2] [varchar](50) NULL,
+	[LEDTXT_FLAG3] [varchar](50) NULL,
+	[LEDTXT_FLAG4] [varchar](255) NULL,
+	[Start_TIME] [datetime] NULL,
+	[Interval_TIME] [varchar](255) NULL,
+	[OUTTYPE] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[LEDTXT_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'序号' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'LEDTXT', @level2type=N'COLUMN',@level2name=N'LEDTXT_ID'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'预约发送时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'LEDTXT', @level2type=N'COLUMN',@level2name=N'LEDTXT_APMT_TIME'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'内容类型' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'LEDTXT', @level2type=N'COLUMN',@level2name=N'LEDTXT_TYPE'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'内容主题' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'LEDTXT', @level2type=N'COLUMN',@level2name=N'LEDTXT_TOPIC'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'内容正文' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'LEDTXT', @level2type=N'COLUMN',@level2name=N'LEDTXT_BODY'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'LED发送屏幕列表' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'LEDTXT', @level2type=N'COLUMN',@level2name=N'LEDTXT_LIST'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'对应组织代码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'LEDTXT', @level2type=N'COLUMN',@level2name=N'ORG_CODEA'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'接收机物理编码' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'LEDTXT', @level2type=N'COLUMN',@level2name=N'SRV_PHYSICAL_CODE'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'内容撰写者' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'LEDTXT', @level2type=N'COLUMN',@level2name=N'USER_CODE_edit'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'撰写时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'LEDTXT', @level2type=N'COLUMN',@level2name=N'Edit_TIME'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'显示特效' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'LEDTXT', @level2type=N'COLUMN',@level2name=N'FlashType'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'运行速度' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'LEDTXT', @level2type=N'COLUMN',@level2name=N'ShowRate'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'停留时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'LEDTXT', @level2type=N'COLUMN',@level2name=N'StayTime'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'内容审核' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'LEDTXT', @level2type=N'COLUMN',@level2name=N'USER_CODE_audit'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'审核时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'LEDTXT', @level2type=N'COLUMN',@level2name=N'Audit_TIME'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'内容批准发布' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'LEDTXT', @level2type=N'COLUMN',@level2name=N'USER_CODE_approval'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'批准时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'LEDTXT', @level2type=N'COLUMN',@level2name=N'Approval_TIME'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'完成发送时间' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'LEDTXT', @level2type=N'COLUMN',@level2name=N'LEDTXT_SENT_TIME'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'发送成功标志' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'LEDTXT', @level2type=N'COLUMN',@level2name=N'LEDTXT_FLAG1'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'标志2' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'LEDTXT', @level2type=N'COLUMN',@level2name=N'LEDTXT_FLAG2'
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'标志3' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'LEDTXT', @level2type=N'COLUMN',@level2name=N'LEDTXT_FLAG3'
+GO
+/****** 对象:  Table [dbo].[LOG]    脚本日期: 07/31/2017 11:15:48 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[LOG](
+	[LOG_ID] [int] IDENTITY(1,1) NOT NULL,
+	[LOG_USER_CODE] [varchar](50) NULL,
+	[LOG_TIME] [datetime] NULL,
+	[LOG_CLIENT] [varchar](50) NULL,
+	[LOG_Description] [varchar](100) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[LOG_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[Manufactory]    脚本日期: 07/31/2017 11:15:49 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Manufactory](
+	[MFT_ID] [int] IDENTITY(1,1) NOT NULL,
+	[MFT_CODE] [varchar](50) NULL,
+	[MFT_DETAIL] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[MFT_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[MediaServer]    脚本日期: 07/31/2017 11:15:53 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[MediaServer](
+	[SERVER_ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[IPADDRESS] [varchar](255) NULL,
+	[IPMAPPEDADDRESS] [varchar](255) NULL,
+	[SERVERNAME] [varchar](50) NULL,
+	[OPENMAPPER] [varchar](50) NULL,
+	[STATUS] [varchar](50) NULL,
+	[IPPORT] [varchar](50) NULL,
+	[IPMAPPEDPORT] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[SERVER_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  StoredProcedure [dbo].[Proc_Srv_LotsRmDataDeal]    脚本日期: 07/31/2017 11:14:43 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- Batch submitted through debugger: SQLQuery7.sql|7|0|C:\Users\Administrator\AppData\Local\Temp\~vs48C6.sql
+
+/* =============================================
+-- Author:		Fzj
+-- Create date: 20140730
+-- Description:	伺服程序数据处理
+--批量处理伺服数据
+--处理内容说明：
+--1、更新SRV表在线状态
+--2、更新或新增RAWDATASTREAMS表
+--3、更新或新增SRVDAYINFO表，并修改状态为在线
+--参数说明：
+--@SrvPhyId 设备物理码
+--@RdsTime  回传时间
+--@RdsBody  信息体内容
+--@RdsFlag  回传类型
+--修改记录
+序号  修改时间    修改人    修改内容
+1     20140731    FZJ       增加TRY CATCH处理，防止出现死锁导致程序阻塞
+2     20140902    FZJ       将临时表RDSBACKUP内容转入临时表#tmp_rdsbackup，防止并发影响数据
+3     20140912    FZJ       将COM口、TCP处理合并为一个存储过程
+=============================================*/
+create PROCEDURE [dbo].[Proc_Srv_LotsRmDataDeal]
+	@tablename varchar(50) = 'RDSBackUp'
+AS
+BEGIN
+	SET NOCOUNT ON;
+	--将传入的字符串转为数据并存入临时表中
+
+	declare @Status nvarchar(10), @ProgramCheck nvarchar(10)
+	set @Status = '在线'
+	set @ProgramCheck = '转播中'
+
+	declare @s varchar (2000), @tmpname varchar(100)
+	set @tmpname = '##tmp_rds' + substring(@tablename, 3, len(@tablename) - 2)
+
+	--判断全局临时表是否存在，如果存在则删除
+	
+	begin tran t1
+			set @s = N'Select * into ' + @tmpname +	' from ' + @tablename + ';' 
+				+ 'truncate table ' + @tablename + ';'
+				+ 'select * from ' + @tmpname + ';'
+				--处理RDSBackUp中可能重复记录
+				+  'Delete from ' + @tmpname +  
+				' Where RDS_BACKUPID not in (Select max(RDS_BACKUPID) ' 
+				+ ' from ' + @tmpname + ' group by SRV_PHYSICAL_CODE, RDS_FLAG);'
+				--更新SRV表
+				+ 'Update Srv set srv_rmt_status = ''' + @Status +''' , srv_rmt_time = b.RDS_TIME
+				from Srv a '
+				+ ' inner join ' + @tmpname + ' b  on a.Srv_physical_code = b.SRV_PHYSICAL_CODE;'
+
+			exec (@s);
+
+			
+			
+			
+			if @@error <> 0 
+			begin
+				rollback tran t1
+				return
+			end
+			--更新或新增RAWDATASTREAMS表
+			set @s = N'Update RawDataStreams set rds_body = b.RDS_BODY, rds_time = b.RDS_TIME
+				from RawDataStreams a ' +
+				'inner join ' + @tmpname + ' b  on a.Srv_physical_code = b.SRV_PHYSICAL_CODE
+								and a.rds_flag = b.RDS_FLAG;'
+			exec(@s)
+			if @@error <> 0 
+			begin
+				rollback tran t1
+				return
+			end
+			
+			set @s = N'insert into RawDataStreams(rds_time, rds_body, Srv_physical_code, rds_flag)
+				select RDS_TIME, RDS_BODY, SRV_PHYSICAL_CODE, RDS_FLAG ' +
+				' from ' + @tmpname + ' A
+				where not exists (select 1 from RawDataStreams b where a.SRV_PHYSICAL_CODE = b.Srv_physical_code
+								and a.RDS_FLAG = b.rds_flag);'
+			exec(@s)
+
+			if @@error <> 0 
+			begin
+				rollback tran t1
+				return
+			end
+
+			set @s = N'update SRVDayInfo set SRV_RMT_STATUS = ''' + @Status + ''' , SRV_UPDATE_DATE = b.RDS_TIME 
+				from  SRVDayInfo a ' + 
+				'inner join ' + @tmpname + ' b on a.SRV_PHYSICAL_CODE = b.SRV_PHYSICAL_CODE
+				where  a.SRV_RMT_STATUS <> ''' + @Status +
+					''' and Convert(varchar(50), a.SRV_REP_DATE, 112) = Convert(varchar(50), b.RDS_TIME, 112);'
+			exec(@s)
+			if @@error <> 0 
+			begin
+				rollback tran t1
+				return
+			end
+
+			set @s = N'update SRVDayInfo set SRV_PROGRAM_CHECK = case b.RDS_FLAG when 1 then ''' + @ProgramCheck + ''' else '''' end
+				from  SRVDayInfo a ' + 
+				'inner join ' + @tmpname + ' b on a.SRV_PHYSICAL_CODE = b.SRV_PHYSICAL_CODE
+				where  Convert(varchar(50), a.SRV_REP_DATE, 112) = Convert(varchar(50), b.RDS_TIME, 112);' 	
+			exec(@s)
+
+			if @@error <> 0 
+			begin
+				rollback tran t1
+				return
+			end
+
+			if (convert(varchar(20), getdate(), 114) > '00:03:00')
+			begin
+				set @s = N'insert into SRVDayInfo(SRV_ID, SRV_PHYSICAL_CODE, SRV_LOGICAL_CODE, SRV_ORG_CODE, SRV_ORG_ADDRESS,
+								 SRV_RMT_STATUS, SRV_REP_DATE, SRV_UPDATE_DATE, SRV_DAYINFO_REM, SRV_PROGRAM_CHECK)
+					Select A.SRV_ID, a.SRV_PHYSICAL_CODE, a.SRV_LOGICAL_CODE, a.SRV_ORG_CODEA, a.SRV_ADDRESS, ''' + @Status + ''',
+							convert(varchar(50), b.RDS_TIME, 112), b.RDS_TIME,'''', Case b.RDS_FLAG when 1 then ''' + @ProgramCheck + ''' else '''' end
+							from SRV A ' + 
+							'inner join ' + @tmpname + ' b on A.SRV_PHYSICAL_CODE = b.SRV_PHYSICAL_CODE
+							where a.SRV_RMT_SWITCH = ''启用'' and 
+								not exists (select 1 from SrvDayInfo c where c.SRV_PHYSICAL_CODE = b.SRV_PHYSICAL_CODE 
+												and Convert(varchar(50), c.SRV_REP_DATE, 112) = Convert(varchar(50), b.RDS_TIME, 112));'
+				exec(@s)
+				if @@error <> 0 
+				begin
+					rollback tran t1
+					return
+				end
+
+			end
+
+			set @s = N'drop table ' + @tmpname + ';'
+			exec (@s)
+			
+	commit tran t1
+	
+
+END
+GO
+/****** 对象:  Table [dbo].[IvrOutChannel]    脚本日期: 07/31/2017 11:15:43 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[IvrOutChannel](
+	[Ivr_ID] [int] IDENTITY(1,1) NOT NULL,
+	[Ivr_Plat_No] [varchar](50) NULL,
+	[Ivr_Out_No] [varchar](50) NULL,
+	[Ivr_PID] [varchar](50) NULL,
+	[Ivr_DvbType] [varchar](50) NULL,
+	[Ivr_Freq] [varchar](50) NULL,
+	[Ivr_ModType] [varchar](50) NULL,
+	[Ivr_Rate] [varchar](50) NULL,
+	[Ivr_CarrMode] [varchar](50) NULL,
+	[Ivr_FHMode] [varchar](50) NULL,
+	[Ivr_ILMode] [varchar](50) NULL,
+	[Ivr_CodeType] [varchar](50) NULL,
+	[Ivr_Right] [varchar](50) NULL,
+	[Ivr_Note] [varchar](500) NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[MicroPhone]    脚本日期: 07/31/2017 11:15:56 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[MicroPhone](
+	[MicroPhone_ID] [int] IDENTITY(1,1) NOT NULL,
+	[MicroPhone_CodeID] [int] NULL,
+	[MicroPhone_IP] [varchar](50) NULL,
+	[MicroPhone_Class] [varchar](50) NOT NULL,
+	[MicroPhone_InsPort] [int] NULL,
+	[MicroPhone_Physical] [varchar](50) NULL,
+	[MicroPhone_Logical] [varchar](50) NULL,
+	[MicroPhone_UKeyID] [varchar](200) NULL,
+	[MicroPhone_KeyInUse] [bit] NOT NULL DEFAULT ((0)),
+	[MicroPhone_InUse] [bit] NOT NULL DEFAULT ((1)),
+	[MicroPhone_Note] [varchar](200) NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[SrvParamsSet]    脚本日期: 07/31/2017 11:17:03 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[SrvParamsSet](
+	[Srv_ID] [int] IDENTITY(1,1) NOT NULL,
+	[Srv_MainPID] [int] NULL,
+	[Srv_CmdPID] [int] NULL,
+	[Srv_MainFreq] [decimal](18, 0) NULL,
+	[Srv_RetServerIP] [varchar](20) NULL,
+	[Srv_RetServerPort] [int] NULL,
+	[Srv_RetPeriod] [int] NULL,
+	[Srv_RetMode] [int] NULL,
+	[Srv_RtpRecPort] [int] NULL,
+	[Srv_AduioGrpIp] [varchar](20) NULL,
+	[Srv_AduioGrpPort] [int] NULL,
+	[Srv_CmdGrpIp] [varchar](20) NULL,
+	[Srv_CmdGrpPort] [int] NULL,
+	[Srv_EmgVolSet] [int] NULL,
+	[Srv_NormalVolSet] [int] NULL,
+	[Srv_Enabled] [int] NULL,
+	[Srv_physical_code] [varchar](20) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Srv_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[NetAdmins]    脚本日期: 07/31/2017 11:15:57 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[NetAdmins](
+	[NA_ID] [int] IDENTITY(1,1) NOT NULL,
+	[NA_DETAIL] [varchar](50) NULL,
+	[NA_CELLPHONE] [varchar](50) NULL,
+	[NA_SENDTIME] [datetime] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[NA_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[ONLINERECORD]    脚本日期: 07/31/2017 11:15:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[ONLINERECORD](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[ORG_PHYSICAL_CODE] [varchar](50) NOT NULL,
+	[ORG_TIME] [datetime] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[ProcHead]    脚本日期: 07/31/2017 11:16:31 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ProcHead](
+	[Proc_ID] [int] IDENTITY(1,1) NOT NULL,
+	[Proc_DateTime] [datetime] NULL,
+	[Proc_UserID] [numeric](19, 0) NULL,
+	[Proc_Status] [int] NULL,
+	[Proc_TID] [numeric](19, 0) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Proc_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** 对象:  Table [dbo].[OrgOnlineRate]    脚本日期: 07/31/2017 11:16:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[OrgOnlineRate](
+	[ORG_ONLINE_ID] [int] IDENTITY(1,1) NOT NULL,
+	[ORG_CODEA] [varchar](50) NULL,
+	[ORG_ONLINE_DATE] [datetime] NULL,
+	[ORG_ONLINE_RATE] [decimal](18, 2) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ORG_ONLINE_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[pbcatcol]    脚本日期: 07/31/2017 11:16:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[pbcatcol](
+	[pbc_tnam] [char](30) NULL,
+	[pbc_tid] [int] NULL,
+	[pbc_ownr] [char](30) NULL,
+	[pbc_cnam] [char](30) NULL,
+	[pbc_cid] [smallint] NULL,
+	[pbc_labl] [varchar](254) NULL,
+	[pbc_lpos] [smallint] NULL,
+	[pbc_hdr] [varchar](254) NULL,
+	[pbc_hpos] [smallint] NULL,
+	[pbc_jtfy] [smallint] NULL,
+	[pbc_mask] [varchar](31) NULL,
+	[pbc_case] [smallint] NULL,
+	[pbc_hght] [smallint] NULL,
+	[pbc_wdth] [smallint] NULL,
+	[pbc_ptrn] [varchar](31) NULL,
+	[pbc_bmap] [char](1) NULL,
+	[pbc_init] [varchar](254) NULL,
+	[pbc_cmnt] [varchar](254) NULL,
+	[pbc_edit] [varchar](31) NULL,
+	[pbc_tag] [varchar](254) NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[pbcatedt]    脚本日期: 07/31/2017 11:16:12 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[pbcatedt](
+	[pbe_name] [varchar](30) NOT NULL,
+	[pbe_edit] [varchar](254) NULL,
+	[pbe_type] [smallint] NOT NULL,
+	[pbe_cntr] [int] NULL,
+	[pbe_seqn] [smallint] NOT NULL,
+	[pbe_flag] [int] NULL,
+	[pbe_work] [char](32) NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[platformRegister]    脚本日期: 07/31/2017 11:16:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[platformRegister](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[unifiedId] [varchar](255) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[pbcatfmt]    脚本日期: 07/31/2017 11:16:13 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[pbcatfmt](
+	[pbf_name] [varchar](30) NOT NULL,
+	[pbf_frmt] [varchar](254) NOT NULL,
+	[pbf_type] [smallint] NOT NULL,
+	[pbf_cntr] [int] NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[pbcattbl]    脚本日期: 07/31/2017 11:16:16 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[pbcattbl](
+	[pbt_tnam] [char](30) NULL,
+	[pbt_tid] [int] NULL,
+	[pbt_ownr] [char](30) NULL,
+	[pbd_fhgt] [smallint] NULL,
+	[pbd_fwgt] [smallint] NULL,
+	[pbd_fitl] [char](1) NULL,
+	[pbd_funl] [char](1) NULL,
+	[pbd_fchr] [smallint] NULL,
+	[pbd_fptc] [smallint] NULL,
+	[pbd_ffce] [char](32) NULL,
+	[pbh_fhgt] [smallint] NULL,
+	[pbh_fwgt] [smallint] NULL,
+	[pbh_fitl] [char](1) NULL,
+	[pbh_funl] [char](1) NULL,
+	[pbh_fchr] [smallint] NULL,
+	[pbh_fptc] [smallint] NULL,
+	[pbh_ffce] [char](32) NULL,
+	[pbl_fhgt] [smallint] NULL,
+	[pbl_fwgt] [smallint] NULL,
+	[pbl_fitl] [char](1) NULL,
+	[pbl_funl] [char](1) NULL,
+	[pbl_fchr] [smallint] NULL,
+	[pbl_fptc] [smallint] NULL,
+	[pbl_ffce] [char](32) NULL,
+	[pbt_cmnt] [varchar](254) NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[pbcatvld]    脚本日期: 07/31/2017 11:16:17 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[pbcatvld](
+	[pbv_name] [varchar](30) NOT NULL,
+	[pbv_vald] [varchar](254) NOT NULL,
+	[pbv_type] [smallint] NOT NULL,
+	[pbv_cntr] [int] NULL,
+	[pbv_msg] [varchar](254) NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[PIDINFO]    脚本日期: 07/31/2017 11:16:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[PIDINFO](
+	[PID_ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[PID_VALUE] [varchar](255) NULL,
+	[PID_IP] [varchar](255) NULL,
+	[PID_PROGID] [varchar](255) NULL,
+	[PID_STREAMID] [varchar](255) NULL,
+	[PID_PMTPID] [varchar](255) NULL,
+	[PID_UDP_PORT] [int] NULL,
+	[PID_RES_ADAPT] [varchar](255) NULL,
+	[PID_START_TIME] [datetime] NULL,
+	[PID_DVBTYPE] [varchar](255) NULL,
+	[PID_FREQ] [varchar](255) NULL,
+	[PID_MODTYPE] [varchar](255) NULL,
+	[PID_RATE] [varchar](255) NULL,
+	[PID_CARRMODE] [varchar](255) NULL,
+	[PID_FHMODE] [varchar](255) NULL,
+	[PID_ILMODE] [varchar](255) NULL,
+	[PID_CODETYPE] [varchar](255) NULL,
+	[PID_TYPE] [varchar](255) NULL,
+	[PID_IS_MAINFREQ] [varchar](255) NULL,
+	[PID_NOTE] [varchar](255) NULL,
+	[PID_AREACODE] [varchar](255) NULL,
+	[PID_RES_ADAP] [varchar](255) NULL,
+	[PID_AUDIOPID] [int] NULL,
+	[RTSP_IP] [varchar](50) NULL,
+	[RTSP_PORT] [varchar](50) NULL,
+	[RTSP_NAME] [varchar](50) NULL,
+	[RTSP_IN_IP] [varchar](50) NULL,
+	[RTSP_IN_PORT] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[PID_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[playRecord]    脚本日期: 07/31/2017 11:16:28 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[playRecord](
+	[PR_ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[PR_EVN_TYPE] [varchar](20) NULL,
+	[PR_EVN_SOURCE] [varchar](50) NULL,
+	[PR_MULTI_AREA] [tinyint] NULL,
+	[PR_PID] [numeric](19, 0) NULL,
+	[PR_USERID] [varchar](50) NULL,
+	[PR_PRIORITY] [int] NULL,
+	[PR_AREACODE] [varchar](800) NULL,
+	[PR_STARTTIME] [datetime] NULL,
+	[PR_ACTIVETIME] [datetime] NULL,
+	[PR_REC_STATUS] [varchar](20) NULL,
+	[PR_DEATTACH_AREA] [varchar](500) NULL,
+	[PR_EVN_CLASS] [varchar](1) NULL,
+	[PR_DEFAULT_AREA] [varchar](50) NULL,
+	[PR_SRVTYPE] [int] NULL DEFAULT ((0)),
+	[PR_SourceID] [int] NULL,
+	[PR_DgMicroID] [int] NULL,
+	[RTSP_URL] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[PR_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[PlayRecordList]    脚本日期: 07/31/2017 11:16:30 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[PlayRecordList](
+	[PRL_ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[PRL_USERID] [numeric](19, 0) NULL,
+	[PRL_EVN_TYPE] [varchar](20) NULL,
+	[PRL_EVN_SOURCE] [varchar](20) NULL,
+	[PRL_MULTI_AREA] [varchar](20) NULL,
+	[PRL_PID] [numeric](19, 0) NULL,
+	[PRL_PRIORITY] [int] NULL,
+	[PRL_AREACODE] [varchar](800) NULL,
+	[PRL_STARTTIME] [datetime] NULL,
+	[PRL_ENDTIME] [datetime] NULL,
+	[PRL_STATUS] [varchar](20) NULL,
+	[PR_EVN_CLASS] [int] NULL,
+	[PRL_FILENAME] [varchar](100) NULL,
+	[PRL_URL] [varchar](200) NULL,
+	[PRL_PARENTID] [numeric](19, 0) NULL,
+	[PRL_AREADETAIL] [varchar](1000) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[PRL_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[Program]    脚本日期: 07/31/2017 11:16:32 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Program](
+	[id] [int] NOT NULL,
+	[name] [varchar](50) NULL,
+	[brcId] [int] NOT NULL,
+	[auditStatus] [varchar](10) NULL,
+	[userId] [int] NOT NULL,
+	[resource] [varchar](5000) NULL,
+	[createTime] [datetime] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[ProtocolTransfers]    脚本日期: 07/31/2017 11:16:35 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[ProtocolTransfers](
+	[PTF_ID] [int] NOT NULL,
+	[PTF_CODE] [varchar](50) NULL,
+	[PTF_ORG_CODEA] [varchar](50) NULL,
+	[PTF_MFT_CODE] [varchar](50) NULL,
+	[PTF_IP] [varchar](50) NULL,
+	[PTRF_PORT] [varchar](50) NULL,
+	[PTF_MODE] [varchar](50) NULL,
+	[PTF_STATUS] [varchar](50) NULL,
+	[PTF_TIME] [datetime] NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[RawDataStreams]    脚本日期: 07/31/2017 11:16:36 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[RawDataStreams](
+	[RDS_ID] [int] IDENTITY(1,1) NOT NULL,
+	[RDS_TIME] [datetime] NULL,
+	[RDS_BODY] [varchar](600) NULL,
+	[RDS_FLAG] [bit] NULL,
+	[SRV_PHYSICAL_CODE] [varchar](50) NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[RDSBackUp]    脚本日期: 07/31/2017 11:16:36 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[RDSBackUp](
+	[RDS_BACKUPID] [int] IDENTITY(1,1) NOT NULL,
+	[RDS_TIME] [datetime] NULL,
+	[RDS_BODY] [varchar](600) NULL,
+	[SRV_PHYSICAL_CODE] [varchar](50) NULL,
+	[RDS_FLAG] [bit] NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[realtimeBroadcast]    脚本日期: 07/31/2017 11:16:37 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[realtimeBroadcast](
+	[id] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[devCode] [varchar](255) NULL,
+	[programName] [varchar](255) NULL,
+	[resourceUri] [varchar](255) NULL,
+	[startTime] [datetime] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[resource]    脚本日期: 07/31/2017 11:16:39 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[resource](
+	[id] [int] NOT NULL,
+	[name] [varchar](200) NULL,
+	[url] [varchar](500) NOT NULL,
+	[timeOut] [int] NULL,
+	[userId] [int] NOT NULL,
+	[createTime] [datetime] NOT NULL,
+	[discribe] [varchar](500) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[SmsHistory]    脚本日期: 07/31/2017 11:16:41 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[SmsHistory](
+	[SR_ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[SR_RecordSerial] [varchar](20) NULL,
+	[SR_DateTime] [varchar](50) NULL,
+	[SR_Time] [datetime] NULL,
+	[SR_Number] [varchar](50) NULL,
+	[SR_CodeType] [varchar](50) NULL,
+	[SR_talk_length] [varchar](50) NULL,
+	[SR_MsgContent] [varchar](800) NULL,
+	[SR_Physical] [varchar](50) NULL,
+	[SR_Type] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[SR_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[snd_record]    脚本日期: 07/31/2017 11:16:42 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[snd_record](
+	[SR_ID] [int] IDENTITY(1,1) NOT NULL,
+	[srv_physical_code] [varchar](50) NULL,
+	[recordnum] [int] NULL,
+	[file_num] [int] NULL,
+	[file_name] [varchar](50) NULL,
+	[record_time] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[SR_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'当前记录数(终端记录数)' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'snd_record', @level2type=N'COLUMN',@level2name=N'recordnum'
+GO
+/****** 对象:  Table [dbo].[SPCAUTORUN]    脚本日期: 07/31/2017 11:16:43 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[SPCAUTORUN](
+	[SPC_ID] [int] IDENTITY(1,1) NOT NULL,
+	[SPC_TYPE] [int] NULL,
+	[SPC_DAY] [varchar](100) NULL,
+	[SPC_TIME] [varchar](50) NULL,
+	[SPC_Contain] [int] NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[TextToVoice]    脚本日期: 07/31/2017 11:17:16 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[TextToVoice](
+	[ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[TOPIC] [varchar](255) NULL,
+	[BODY] [varchar](1024) NULL,
+	[PLAYCOUNT] [varchar](255) NULL,
+	[TSCMDMODE] [varchar](255) NULL,
+	[TSCMDVALUEID] [varchar](255) NULL,
+	[REVIEWSTATUS] [varchar](255) NULL,
+	[ISSUESTATUS] [varchar](255) NULL,
+	[USERID] [varchar](255) NULL,
+	[TIME] [datetime] NULL,
+	[OUTTYPE] [varchar](255) NULL,
+	[ISSUETIME] [datetime] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[SPOTSPRIORITY]    脚本日期: 07/31/2017 11:16:44 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[SPOTSPRIORITY](
+	[ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[NAME] [varchar](255) NULL,
+	[PRIORITY] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[Srv_Status]    脚本日期: 07/31/2017 11:16:56 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Srv_Status](
+	[devid] [int] IDENTITY(1,1) NOT NULL,
+	[srv_physical_code] [varchar](20) NULL,
+	[powersupplystatus] [varchar](20) NULL,
+	[powervoltage] [varchar](20) NULL,
+	[powercullent] [varchar](20) NULL,
+	[powerconsumption] [varchar](20) NULL,
+	[audiolevel] [varchar](20) NULL,
+	[pavoltage] [varchar](20) NULL,
+	[controlfrequency] [varchar](20) NULL,
+	[cflevel] [varchar](20) NULL,
+	[audiofrequency] [varchar](20) NULL,
+	[aflevel] [varchar](20) NULL,
+	[detectfrequency] [varchar](20) NULL,
+	[dflevel] [varchar](20) NULL,
+	[devlogicid] [varchar](20) NULL,
+	[devphyid] [varchar](20) NULL,
+	[monitorstatus] [varchar](20) NULL,
+	[monitor_up_timer] [varchar](50) NULL,
+	[devrtc] [varchar](20) NULL,
+	[srv_time] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[devid] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[SRVDayInfo]    脚本日期: 07/31/2017 11:16:58 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[SRVDayInfo](
+	[SRV_DayInfoID] [decimal](18, 0) IDENTITY(1,1) NOT NULL,
+	[SRV_ID] [decimal](18, 0) NULL,
+	[SRV_PHYSICAL_CODE] [nchar](50) NULL,
+	[SRV_LOGICAL_CODE] [nchar](50) NULL,
+	[SRV_ORG_CODE] [nchar](50) NULL,
+	[SRV_ORG_ADDRESS] [nchar](100) NULL,
+	[SRV_RMT_STATUS] [nchar](50) NULL,
+	[SRV_REP_DATE] [datetime] NULL,
+	[SRV_UPDATE_DATE] [datetime] NULL,
+	[SRV_DAYINFO_REM] [nvarchar](200) NULL,
+	[SRV_PROGRAM_CHECK] [varchar](50) NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[greenTemplate]    脚本日期: 07/31/2017 11:15:40 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[greenTemplate](
+	[id] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[mediaId] [int] NULL,
+	[ledId] [int] NULL,
+	[text] [varchar](max) NULL,
+	[playType] [varchar](50) NULL,
+	[postDepartment] [varchar](50) NULL,
+	[postName] [varchar](50) NULL,
+	[postResign] [varchar](50) NULL,
+	[postTel] [varchar](50) NULL,
+	[postUserId] [int] NULL,
+	[postPhoto] [varchar](50) NULL,
+	[postIDcards] [varchar](50) NULL,
+	[adminName] [varchar](50) NULL,
+	[adminDepartment] [varchar](50) NULL,
+	[adminResign] [varchar](50) NULL,
+	[adminTel] [varchar](50) NULL,
+	[adminPhoto] [varchar](50) NULL,
+	[adminIDcards] [varchar](50) NULL,
+	[consoleID] [int] NULL,
+	[realtimeType] [varchar](50) NULL,
+	[status] [varchar](50) NULL,
+	[date] [datetime] NULL,
+	[startTime] [datetime] NULL,
+	[stopTime] [datetime] NULL,
+	[flag1] [varchar](50) NULL,
+	[flag2] [varchar](50) NULL,
+	[flag3] [varchar](50) NULL,
+	[org_codea] [varchar](50) NULL,
+	[org_detail] [varchar](50) NULL,
+	[chooseDate] [varchar](50) NULL,
+	[chooseCount] [varchar](50) NULL,
+	[mediaName] [varchar](50) NULL,
+	[checkStatus] [varchar](255) NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[SRVDefQry]    脚本日期: 07/31/2017 11:16:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[SRVDefQry](
+	[Org_class] [varchar](50) NULL,
+	[srv_org_address] [varchar](50) NULL,
+	[srv_online] [int] NULL,
+	[srv_total] [int] NULL,
+	[srv_onlinerate] [decimal](18, 3) NULL,
+	[srv_org_code] [varchar](50) NULL,
+	[srv_rep_date] [varchar](50) NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[SRVOnline]    脚本日期: 07/31/2017 11:17:00 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[SRVOnline](
+	[SRV_ONLINE_ID] [int] IDENTITY(1,1) NOT NULL,
+	[SRV_PHYSICAL_CODE] [varchar](50) NULL,
+	[SRV_ORG_CODEA] [varchar](50) NULL,
+	[SRV_ONLINE_TIME] [datetime] NULL,
+	[SRV_ONLINE_FLAG] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[SRV_ONLINE_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[SRVParamters]    脚本日期: 07/31/2017 11:17:03 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[SRVParamters](
+	[SRV_PMT_ID] [int] IDENTITY(1,1) NOT NULL,
+	[SRV_PHYSICAL_CODE] [varchar](50) NULL,
+	[SRV_PMT_CODE] [varchar](50) NULL,
+	[SRV_PMT_VALUE] [varchar](50) NULL,
+	[SRV_PMT_TIME] [datetime] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[SRV_PMT_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[SRVParamterType]    脚本日期: 07/31/2017 11:17:04 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[SRVParamterType](
+	[SRV_PMT_ID] [int] IDENTITY(1,1) NOT NULL,
+	[SRV_PMT_CODE] [varchar](50) NULL,
+	[SRV_PMT_DETAIL] [varchar](50) NULL,
+	[SRV_PMT_UNIT] [varchar](50) NULL,
+	[SRV_PMT_ADAPET] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[SRV_PMT_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[SRVProgramCheck]    脚本日期: 07/31/2017 11:17:05 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[SRVProgramCheck](
+	[SRV_CHKID] [int] IDENTITY(1,1) NOT NULL,
+	[SRV_CHK_DATE] [datetime] NULL,
+	[SRV_CHK_CODE] [nchar](30) NULL,
+	[SRV_CHK_GAP] [int] NULL
+) ON [PRIMARY]
+GO
+/****** 对象:  Table [dbo].[SrvRecord]    脚本日期: 07/31/2017 11:17:06 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[SrvRecord](
+	[SR_ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[Sc_SrvID] [varchar](255) NULL,
+	[Sc_StartDate] [datetime] NULL,
+	[Sc_FileName] [varchar](255) NULL,
+	[Sc_PreUrl] [varchar](255) NULL,
+	[Sc_Note] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[SR_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[SRVReturn]    脚本日期: 07/31/2017 11:17:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[SRVReturn](
+	[SRV_RTN_ID] [int] IDENTITY(1,1) NOT NULL,
+	[SRV_PHYSICAL_CODE] [varchar](50) NULL,
+	[SRV_RTN_TIME] [datetime] NULL,
+	[SRV_POWER_SWITCH] [varchar](50) NULL,
+	[SRV_VOLUME] [varchar](50) NULL,
+	[SRV_FRE] [decimal](18, 2) NULL,
+	[SRV_RF_LEVEL] [decimal](18, 2) NULL,
+	[SRV_PWR] [decimal](18, 2) NULL,
+	[SRV_AMP] [decimal](18, 2) NULL,
+	[SRV_AMP_V] [decimal](18, 2) NULL,
+	[SRV_AMP_C] [decimal](18, 0) NULL,
+	[SRV_TMP] [decimal](18, 2) NULL,
+	[SRV_AUDIO_LEVEL] [decimal](18, 2) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[SRV_RTN_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[EBMInfo]    脚本日期: 07/31/2017 11:15:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[EBMInfo](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[EBDVersion] [varchar](50) NULL,
+	[SEBDID] [varchar](50) NULL,
+	[SEDBType] [varchar](50) NULL,
+	[SEBRID] [varchar](50) NULL,
+	[EBRID] [varchar](50) NULL,
+	[SEBBuidTime] [datetime] NULL,
+	[EBMID] [varchar](50) NULL,
+	[MsaType] [varchar](50) NULL,
+	[SenderName] [varchar](50) NULL,
+	[SenderCode] [varchar](50) NULL,
+	[SendTime] [datetime] NULL,
+	[EventType] [varchar](50) NULL,
+	[Severity] [varchar](10) NULL,
+	[StartTime] [datetime] NULL,
+	[EndTime] [datetime] NULL,
+	[LanguageCode] [varchar](50) NULL,
+	[MsgTitle] [varchar](50) NULL,
+	[msgDesc] [varchar](max) NULL,
+	[AreaCode] [varchar](500) NULL,
+	[AuxiliaryType] [int] NULL,
+	[AuxiliaryDesc] [varchar](500) NULL,
+	[EBMState] [bit] NULL,
+	[TsCmdStoreID] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[srvStatus]    脚本日期: 07/31/2017 11:17:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[srvStatus](
+	[devid] [int] NOT NULL,
+	[srv_physical_code] [varchar](20) NOT NULL,
+	[powersupplystatus] [varchar](20) NULL,
+	[powervoltage] [varchar](20) NULL,
+	[powercullent] [varchar](20) NULL,
+	[powerconsumption] [varchar](20) NULL,
+	[audiolevel] [varchar](20) NULL,
+	[pavoltage] [varchar](20) NULL,
+	[controlfrequency] [varchar](20) NULL,
+	[cflevel] [varchar](20) NULL,
+	[audiofrequency] [varchar](20) NULL,
+	[aflevel] [varchar](20) NULL,
+	[detectfrequency] [varchar](20) NULL,
+	[dflevel] [varchar](20) NULL,
+	[devlogicid] [varchar](20) NULL,
+	[devphyid] [varchar](20) NULL,
+	[monitorstatus] [varchar](20) NULL,
+	[monitor_up_timer] [varchar](20) NULL,
+	[devrtc] [varchar](20) NULL,
+	[srv_time] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[devid] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[SrvType]    脚本日期: 07/31/2017 11:17:13 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[SrvType](
+	[SRV_ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[SRV_DETAIL] [varchar](255) NULL,
+	[description] [varchar](255) NULL,
+	[SRV_CODE] [varchar](50) NULL,
+	[SRV_MFT_CODE] [varchar](50) NULL,
+	[SRV_TYPE] [varchar](50) NULL,
+	[SRV_HDW_VERSION] [varchar](50) NULL,
+	[SRV_SFW_VERSION] [varchar](50) NULL,
+	[SRV_PWR] [varchar](50) NULL,
+	[SRV_AMP] [varchar](50) NULL,
+	[SRV_RF_LEVEL] [varchar](50) NULL,
+	[SRV_PHOTO] [varchar](150) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[SRV_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[InfoVlaue]    脚本日期: 07/31/2017 11:15:41 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[InfoVlaue](
+	[InfoID] [int] IDENTITY(1,1) NOT NULL,
+	[EBMID] [varchar](200) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[InfoID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[SRVTypeParamters]    脚本日期: 07/31/2017 11:17:14 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[SRVTypeParamters](
+	[SRV_TYP_PMT_ID] [int] NOT NULL,
+	[SRV_CODE] [varchar](50) NULL,
+	[SRV_PMT_CODE] [varchar](50) NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[SWITCHRECORD]    脚本日期: 07/31/2017 11:17:14 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[SWITCHRECORD](
+	[ID] [int] NOT NULL,
+	[SRV_ORG_CODEA] [varchar](50) NOT NULL,
+	[SRV_ORG_COUNT] [int] NOT NULL,
+	[SRV_ORG_TIME] [datetime] NOT NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[UpdateRecord]    脚本日期: 07/31/2017 11:17:19 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[UpdateRecord](
+	[Update_ID] [int] IDENTITY(1,1) NOT NULL,
+	[Update_LogOrPhy] [varchar](50) NULL,
+	[Update_Version] [varchar](50) NULL,
+	[Update_LastTime] [datetime] NULL DEFAULT (getdate()),
+PRIMARY KEY CLUSTERED 
+(
+	[Update_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[CensusAdvice]    脚本日期: 07/31/2017 11:14:52 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[CensusAdvice](
+	[ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[ONLINERATE] [varchar](255) NULL,
+	[THRESHOLD] [varchar](255) NULL,
+	[PHONENUM] [varchar](255) NULL,
+	[ORGID] [varchar](255) NULL,
+	[NORMALSRV] [varchar](255) NULL,
+	[TROUBLESRV] [varchar](255) NULL,
+	[USERID] [varchar](255) NULL,
+	[ORGDETAIL] [varchar](255) NULL,
+	[INTERVAL] [varchar](255) NULL,
+	[UPDATETIME] [datetime] NULL,
+	[SENDTIME] [datetime] NULL,
+	[IPADDRESS] [varchar](50) NULL,
+	[NAME] [varchar](50) NULL,
+	[BEGINTIME] [datetime] NULL,
+	[ENDTIME] [datetime] NULL,
+	[USEFLAG] [varchar](50) NULL,
+	[INTERVALDAY] [int] NULL,
+	[HAVESENDCOUNT] [int] NULL,
+	[SENDCOUNT] [int] NULL,
+	[CREATEDATE] [datetime] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[Green_channel]    脚本日期: 07/31/2017 11:15:34 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Green_channel](
+	[Channel_ID] [int] IDENTITY(1,1) NOT NULL,
+	[media_Path] [varchar](255) NULL,
+	[AuditStatus] [varchar](255) NULL,
+	[text_Path] [varchar](255) NULL,
+	[Content_summary] [varchar](255) NULL,
+	[Play_Type] [varchar](255) NULL,
+	[Post_Department] [varchar](255) NULL,
+	[Post_Name] [varchar](255) NULL,
+	[Post_Resign] [varchar](255) NULL,
+	[Post_Tel] [varchar](255) NULL,
+	[Post_UserID] [varchar](255) NULL,
+	[Post_Photo] [varchar](255) NULL,
+	[Post_IDcards] [varchar](255) NULL,
+	[Admin_Name] [varchar](255) NULL,
+	[Admin_Department] [varchar](255) NULL,
+	[Admin_Resign] [varchar](255) NULL,
+	[Admin_Tel] [varchar](255) NULL,
+	[Admin_Photo] [varchar](255) NULL,
+	[Admin_IDcards] [varchar](255) NULL,
+	[ConsoleID] [varchar](255) NULL,
+	[Realtime_Type] [varchar](255) NULL,
+	[Status] [varchar](255) NULL,
+	[Post_Date] [datetime] NULL,
+	[Start_Time] [datetime] NULL,
+	[Stop_Time] [datetime] NULL,
+	[chooseCount] [varchar](255) NULL,
+	[Cycletype] [varchar](255) NULL,
+	[ChannelType] [varchar](255) NULL,
+	[AreaIds] [varchar](255) NULL,
+	[FLAG1] [varchar](255) NULL,
+	[FLAG2] [varchar](255) NULL,
+	[FLAG3] [varchar](255) NULL,
+	[ChannelName] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Channel_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[Set_Frequency]    脚本日期: 07/31/2017 11:16:40 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Set_Frequency](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[type] [varchar](255) NULL,
+	[frequency] [varchar](50) NULL,
+ CONSTRAINT [PK__Set_Frequency__5540965B] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[MediaStream]    脚本日期: 07/31/2017 11:15:54 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[MediaStream](
+	[SOURCE_ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[IPADDRESS] [varchar](255) NULL,
+	[PORT] [varchar](255) NULL,
+	[SOURCENAME] [varchar](50) NULL,
+	[SOURCETYPE] [varchar](50) NULL,
+	[MEDIASERVERID] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[SOURCE_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[GateWay]    脚本日期: 07/31/2017 11:15:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[GateWay](
+	[GATEWAY_ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[GATEWAYNAME] [varchar](255) NULL,
+	[IPADDRESS] [varchar](255) NULL,
+	[FREQUENCY] [varchar](50) NULL,
+	[PHYSICALCODE] [varchar](50) NULL,
+	[STATUS] [varchar](50) NULL,
+	[VOLUME] [varchar](50) NULL,
+	[SERVER_ID] [int] NULL,
+	[SERVER_ID_FLAG] [varchar](10) NULL,
+	[SERVER_ID_BAK] [int] NULL,
+	[SERVER_BAK_FLAG] [varchar](10) NULL,
+	[ORG_ID] [numeric](19, 0) NULL,
+	[COVER_MODE] [varchar](50) NULL,
+	[WORK_MODE] [varchar](50) NULL,
+	[EXTRAFRE] [varchar](50) NULL,
+ CONSTRAINT [PK__GateWay__3EFBB5F4] PRIMARY KEY CLUSTERED 
+(
+	[GATEWAY_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[greenChannel]    脚本日期: 07/31/2017 11:15:35 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[greenChannel](
+	[id] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[NAME] [varchar](255) NULL,
+	[code] [varchar](255) NULL,
+	[authCode] [varchar](255) NULL,
+	[detail] [varchar](255) NULL,
+	[templateId] [numeric](19, 0) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[Organization1]    脚本日期: 07/31/2017 11:16:07 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Organization1](
+	[ORG_ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[ORG_DETAIL] [varchar](255) NULL,
+	[DESCRIPTION] [varchar](255) NULL,
+	[MASTER] [varchar](255) NULL,
+	[point] [varchar](255) NULL,
+	[parentId] [numeric](19, 0) NULL,
+	[ORG_CODEA] [varchar](255) NULL,
+	[ORG_CLASS] [varchar](255) NULL,
+	[ORG_CODEB] [varchar](255) NULL,
+	[ORG_GPS] [varchar](255) NULL,
+	[ORG_BAIDU] [varchar](255) NULL,
+	[ORG_GOOGLE] [varchar](255) NULL,
+	[ORG_FLAG1] [varchar](255) NULL,
+	[ORG_FLAG2] [varchar](255) NULL,
+	[ORG_FLAG3] [varchar](255) NULL,
+	[ORG_SRV_BASIC] [varchar](255) NULL,
+	[ORG_SRV_REMOTE] [int] NULL,
+	[ORG_SRV_ONLINE] [int] NULL,
+	[ORG_BROADCAST_IP] [varchar](255) NULL,
+	[ORG_PWD] [varchar](255) NULL,
+	[broadcastRecordId] [numeric](19, 0) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ORG_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[Organization]    脚本日期: 07/31/2017 11:16:04 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Organization](
+	[ORG_ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[ORG_DETAIL] [varchar](255) NULL,
+	[DESCRIPTION] [varchar](255) NULL,
+	[MASTER] [varchar](255) NULL,
+	[point] [varchar](255) NULL,
+	[parentId] [numeric](19, 0) NULL,
+	[ORG_CODEA] [varchar](255) NULL,
+	[ORG_CLASS] [varchar](255) NULL,
+	[ORG_CODEB] [varchar](255) NULL,
+	[ORG_GPS] [varchar](255) NULL,
+	[ORG_BAIDU] [varchar](255) NULL,
+	[ORG_GOOGLE] [varchar](255) NULL,
+	[ORG_FLAG1] [varchar](255) NULL,
+	[ORG_FLAG2] [varchar](255) NULL,
+	[ORG_FLAG3] [varchar](255) NULL,
+	[ORG_SRV_BASIC] [int] NULL,
+	[ORG_SRV_REMOTE] [int] NULL,
+	[ORG_SRV_ONLINE] [int] NULL,
+	[ORG_BROADCAST_IP] [varchar](255) NULL,
+	[ORG_PWD] [varchar](255) NULL,
+	[broadcastRecordId] [numeric](19, 0) NULL,
+	[SERVER_ID] [int] NULL,
+	[SERVER_ID_BAK] [int] NULL,
+	[MAINFRE] [varchar](50) NULL,
+	[EXTRAFRE] [varchar](50) NULL,
+	[SERVER_ID_FLAG] [varchar](10) NULL,
+	[SERVER_BAK_FLAG] [varchar](10) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ORG_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[Users]    脚本日期: 07/31/2017 11:17:21 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Users](
+	[USER_ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[name] [varchar](255) NULL,
+	[USER_DETAIL] [varchar](255) NULL,
+	[USER_PWD] [varchar](255) NULL,
+	[gender] [varchar](255) NULL,
+	[phoneNumber] [varchar](255) NULL,
+	[email] [varchar](255) NULL,
+	[description] [varchar](255) NULL,
+	[departmentId] [numeric](19, 0) NULL,
+	[USER_CODE] [varchar](50) NULL,
+	[USER_CLASS] [varchar](50) NULL,
+	[USER_PRIORITY] [int] NULL,
+	[USER_ORG_CODE] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[USER_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[ch_platformdevice]    脚本日期: 07/31/2017 11:14:56 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[ch_platformdevice](
+	[ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[NAME] [varchar](255) NULL,
+	[SRV_PHYSICAL_CODE] [varchar](255) NULL,
+	[SRV_MFT_DATE] [datetime] NULL,
+	[STATUS] [varchar](255) NULL,
+	[platformDeviceTypeId] [numeric](19, 0) NULL,
+	[DESCRIPTION] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[ch_role_privilege]    脚本日期: 07/31/2017 11:15:03 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ch_role_privilege](
+	[privilegeId] [numeric](19, 0) NOT NULL,
+	[roleId] [numeric](19, 0) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[roleId] ASC,
+	[privilegeId] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** 对象:  Table [dbo].[ch_user_role]    脚本日期: 07/31/2017 11:15:06 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ch_user_role](
+	[roleId] [numeric](19, 0) NOT NULL,
+	[userId] [numeric](19, 0) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[userId] ASC,
+	[roleId] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** 对象:  Table [dbo].[ch_role_area]    脚本日期: 07/31/2017 11:15:03 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ch_role_area](
+	[areaId] [numeric](19, 0) NOT NULL,
+	[roleId] [numeric](19, 0) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[roleId] ASC,
+	[areaId] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** 对象:  Table [dbo].[program_template]    脚本日期: 07/31/2017 11:16:33 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[program_template](
+	[PTId] [int] IDENTITY(1,1) NOT NULL,
+	[programId] [numeric](19, 0) NULL,
+	[templateId] [numeric](19, 0) NULL,
+	[time] [datetime] NULL,
+	[type] [varchar](255) NULL,
+	[flowType] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[PTId] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[Srv]    脚本日期: 07/31/2017 11:16:53 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[Srv](
+	[SRV_ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[name] [varchar](255) NULL,
+	[deviceTypeId] [numeric](19, 0) NULL,
+	[areaId] [numeric](19, 0) NULL,
+	[description] [varchar](255) NULL,
+	[location] [varchar](255) NULL,
+	[installTime] [datetime] NULL,
+	[onlineStatus] [varchar](255) NULL,
+	[logicId] [varchar](255) NULL,
+	[SRV_CODE] [varchar](255) NULL,
+	[powerStatus] [varchar](255) NULL,
+	[averageWaste] [varchar](255) NULL,
+	[voltageNow] [varchar](255) NULL,
+	[currentNow] [varchar](255) NULL,
+	[audioLevel] [varchar](255) NULL,
+	[paPeakVoltage] [varchar](255) NULL,
+	[controlRate] [varchar](255) NULL,
+	[controlRateStrength] [varchar](255) NULL,
+	[broadcastRate] [varchar](255) NULL,
+	[broadcastRateStrength] [varchar](255) NULL,
+	[SRV_PHYSICAL_CODE] [varchar](255) NULL,
+	[SRV_LOGICAL_CODE] [varchar](255) NULL,
+	[SRV_ORG_CODEA] [varchar](255) NULL,
+	[SRV_ADDRESS] [varchar](100) NULL,
+	[SRV_GPS] [varchar](255) NULL,
+	[SRV_BAIDU] [varchar](255) NULL,
+	[SRV_GOOGLE] [varchar](255) NULL,
+	[SRV_STATUS] [varchar](255) NULL,
+	[SRV_RMT_MODE] [varchar](255) NULL,
+	[SRV_RMT_SWITCH] [varchar](255) NULL,
+	[SRV_RMT_PERIOD] [varchar](255) NULL,
+	[SRV_MFT_DATE] [datetime] NULL,
+	[SRV_RMT_IMEI] [varchar](255) NULL,
+	[SRV_RMT_ICCID] [varchar](255) NULL,
+	[SRV_RMT_MSISDN] [varchar](255) NULL,
+	[SRV_RMT_STARTDATE] [datetime] NULL,
+	[SRV_MMT] [varchar](255) NULL,
+	[SRV_RMT_TIME] [datetime] NULL,
+	[SRV_FLAG1] [varchar](255) NULL,
+	[SRV_RMT_STATUS] [varchar](255) NULL,
+	[SRV_FLAG2] [varchar](255) NULL,
+	[SRV_FLAG3] [varchar](255) NULL,
+	[SRV_LAST_OPERATION] [varchar](255) NULL,
+	[SRV_IP] [varchar](255) NULL,
+	[srvMac] [varchar](255) NULL,
+	[srv_gprs_id] [varchar](255) NULL,
+	[srv_sim_id] [varchar](255) NULL,
+	[srv_sim_userId] [varchar](255) NULL,
+	[srv_sim_date] [datetime] NULL,
+	[rawDataTime] [datetime] NULL,
+	[rawDataBody] [varchar](600) NULL,
+	[rawDataFlag] [tinyint] NULL,
+	[includeLED] [varchar](255) NULL,
+	[KIND_IP] [int] NULL,
+	[KIND_TS] [int] NULL,
+	[KIND_FM] [int] NULL,
+	[SERVER_ID] [int] NULL,
+	[SERVER_ID_BAK] [int] NULL,
+	[SERVER_ID_FLAG] [varchar](50) NULL,
+	[MAINFRE] [varchar](50) NULL,
+	[EXTRAFRE] [varchar](50) NULL,
+	[SERVER_BAK_FLAG] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[SRV_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[broadcastRecord]    脚本日期: 07/31/2017 11:14:49 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[broadcastRecord](
+	[id] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[deviceId] [numeric](19, 0) NULL,
+	[brcTimeBegin] [datetime] NULL,
+	[brcTimeEnd] [datetime] NULL,
+	[brcDuration] [numeric](19, 0) NULL,
+	[brcWay] [varchar](255) NULL,
+	[brcContent] [varchar](255) NULL,
+	[userId] [numeric](19, 0) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[monitorHistory]    脚本日期: 07/31/2017 11:15:57 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[monitorHistory](
+	[id] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[fileUrl] [varchar](255) NULL,
+	[genTime] [datetime] NULL,
+	[deviceId] [numeric](19, 0) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[ch_storedevice]    脚本日期: 07/31/2017 11:15:05 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[ch_storedevice](
+	[ID] [numeric](19, 0) IDENTITY(1,1) NOT NULL,
+	[NAME] [varchar](255) NULL,
+	[SRV_PHYSICAL_CODE] [varchar](255) NULL,
+	[SRV_MFT_DATE] [datetime] NULL,
+	[STATUS] [varchar](255) NULL,
+	[description] [varchar](255) NULL,
+	[deviceTypeId] [numeric](19, 0) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[noteControl]    脚本日期: 07/31/2017 11:15:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[noteControl](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[name] [varchar](20) NULL,
+	[physicalCode] [varchar](50) NOT NULL,
+	[userId] [numeric](19, 0) NOT NULL,
+	[time] [datetime] NULL,
+	[note] [varchar](500) NULL,
+	[corCode] [varchar](200) NULL,
+	[pid] [varchar](50) NULL,
+ CONSTRAINT [PK__noteControl__2DB1C7EE] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[PhoneSingle]    脚本日期: 07/31/2017 11:16:20 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[PhoneSingle](
+	[PS_ID] [int] IDENTITY(1,1) NOT NULL,
+	[name] [varchar](255) NULL,
+	[PS_Physical_Code] [varchar](255) NULL,
+	[time] [datetime] NULL,
+	[PS_Note] [varchar](255) NULL,
+	[corCode] [varchar](255) NULL,
+	[userId] [numeric](19, 0) NULL,
+	[PS_Sing_PID] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[PS_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  Table [dbo].[media]    脚本日期: 07/31/2017 11:15:52 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[media](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[name] [varchar](255) NULL,
+	[note] [varchar](500) NULL,
+	[url] [varchar](255) NULL,
+	[userId] [numeric](19, 0) NULL,
+	[time] [datetime] NULL,
+	[voicePid] [int] NULL,
+	[videoPid] [int] NULL,
+	[type] [varchar](255) NULL,
+	[format] [int] NULL,
+	[status] [varchar](20) NULL,
+	[voiceKBPS] [int] NULL,
+	[videoKBPS] [int] NULL,
+	[FLAG] [varchar](50) NULL,
+	[FLAG1] [varchar](255) NULL,
+	[startTime] [datetime] NULL,
+	[endTime] [datetime] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** 对象:  StoredProcedure [dbo].[Proc_Srv_StatusDeal]    脚本日期: 07/31/2017 11:14:43 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+/****** 对象:  StoredProcedure [dbo].[Proc_Srv_StatusDeal]    脚本日期: 07/08/2014 16:12:50 ******/
+
+-- =============================================
+-- Author:		kingkie
+-- Create date: 20150708
+-- Description:	终端状态表更新
+--参数说明：
+--@SrvPhyId 设备物理码
+--@RdsInfoBody  参数表。
+-- =============================================
+CREATE PROCEDURE [dbo].[Proc_Srv_StatusDeal]
+	@SrvPhyId nvarchar(50),
+	@RdsInfoUpdate nvarchar(800),
+    @RdsInfoInsert nvarchar(800)
+AS
+BEGIN
+	SET NOCOUNT ON;
+	declare @Status nvarchar(10), @ProgramCheck nvarchar(10)
+	declare @s varchar (2000), @tmpname varchar(100)
+
+	--set @RdsTime = cast(@RdsTimes as datetime)
+	
+	--更新SRV_Status表
+	begin tran tDeal
+		begin try
+			if exists (select 1 from srv where srv_physical_code = @SrvPhyId)
+			    begin
+                    if exists(select 1 from srv_status where  srv_physical_code = @SrvPhyId)
+					begin
+						--更新SRV表
+						set @s = @RdsInfoUpdate
+						exec (@s);
+					end
+                    else
+                    begin
+						set @s = @RdsInfoInsert
+						exec (@s);
+                    end
+			    end
+            else
+				begin
+                    if exists(select 1 from srv_status where  srv_physical_code = @SrvPhyId)
+					begin
+						--更新SRV表
+						set @s = @RdsInfoUpdate
+						exec (@s);
+					end
+                    else
+                    begin
+						set @s = @RdsInfoInsert
+						exec (@s);
+                    end
+				end
+			if @@error <> 0 
+			begin
+				rollback tran tDeal
+				return 0
+			end
+
+		end try
+		begin catch		
+			rollback tran tDeal
+			return -1
+		end catch
+
+	commit tran tDeal
+END
+GO
+/****** 对象:  View [dbo].[gprs]    脚本日期: 07/31/2017 11:17:21 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE VIEW [dbo].[gprs] AS 
+SELECT     devid, srv_physical_code, powersupplystatus, powervoltage, powercullent, powerconsumption, audiolevel, pavoltage, controlfrequency, cflevel, audiofrequency, 
+                      aflevel, detectfrequency, dflevel, devlogicid, devphyid, monitorstatus, monitor_up_timer, devrtc, srv_time
+FROM         dbo.Srv_Status AS derivedtbl_1
+GO
+/****** 对象:  ForeignKey [FK__broadcast__devic__17C286CF]    脚本日期: 07/31/2017 11:14:49 ******/
+ALTER TABLE [dbo].[broadcastRecord]  WITH CHECK ADD FOREIGN KEY([deviceId])
+REFERENCES [dbo].[Srv] ([SRV_ID])
+GO
+/****** 对象:  ForeignKey [FK__broadcast__userI__18B6AB08]    脚本日期: 07/31/2017 11:14:49 ******/
+ALTER TABLE [dbo].[broadcastRecord]  WITH CHECK ADD FOREIGN KEY([userId])
+REFERENCES [dbo].[Users] ([USER_ID])
+GO
+/****** 对象:  ForeignKey [FK__ch_depart__paren__19AACF41]    脚本日期: 07/31/2017 11:14:53 ******/
+ALTER TABLE [dbo].[ch_department]  WITH CHECK ADD FOREIGN KEY([parentId])
+REFERENCES [dbo].[ch_department] ([id])
+GO
+/****** 对象:  ForeignKey [FK__ch_platfo__platf__1A9EF37A]    脚本日期: 07/31/2017 11:14:57 ******/
+ALTER TABLE [dbo].[ch_platformdevice]  WITH CHECK ADD FOREIGN KEY([platformDeviceTypeId])
+REFERENCES [dbo].[ch_platformdevicetype] ([SRV_ID])
+GO
+/****** 对象:  ForeignKey [FK__ch_privil__paren__1B9317B3]    脚本日期: 07/31/2017 11:14:59 ******/
+ALTER TABLE [dbo].[ch_privilege]  WITH NOCHECK ADD FOREIGN KEY([parentId])
+REFERENCES [dbo].[ch_privilege] ([id])
+GO
+/****** 对象:  ForeignKey [FK__ch_role_a__areaI__1C873BEC]    脚本日期: 07/31/2017 11:15:03 ******/
+ALTER TABLE [dbo].[ch_role_area]  WITH CHECK ADD FOREIGN KEY([areaId])
+REFERENCES [dbo].[Organization] ([ORG_ID])
+GO
+/****** 对象:  ForeignKey [FK__ch_role_a__roleI__1D7B6025]    脚本日期: 07/31/2017 11:15:03 ******/
+ALTER TABLE [dbo].[ch_role_area]  WITH CHECK ADD FOREIGN KEY([roleId])
+REFERENCES [dbo].[ch_role] ([id])
+GO
+/****** 对象:  ForeignKey [FK__ch_role_p__privi__1E6F845E]    脚本日期: 07/31/2017 11:15:03 ******/
+ALTER TABLE [dbo].[ch_role_privilege]  WITH CHECK ADD FOREIGN KEY([privilegeId])
+REFERENCES [dbo].[ch_privilege] ([id])
+GO
+/****** 对象:  ForeignKey [FK__ch_role_p__roleI__1F63A897]    脚本日期: 07/31/2017 11:15:03 ******/
+ALTER TABLE [dbo].[ch_role_privilege]  WITH CHECK ADD FOREIGN KEY([roleId])
+REFERENCES [dbo].[ch_role] ([id])
+GO
+/****** 对象:  ForeignKey [FK__ch_stored__devic__2057CCD0]    脚本日期: 07/31/2017 11:15:05 ******/
+ALTER TABLE [dbo].[ch_storedevice]  WITH CHECK ADD FOREIGN KEY([deviceTypeId])
+REFERENCES [dbo].[SrvType] ([SRV_ID])
+GO
+/****** 对象:  ForeignKey [FK__ch_user_r__roleI__214BF109]    脚本日期: 07/31/2017 11:15:06 ******/
+ALTER TABLE [dbo].[ch_user_role]  WITH CHECK ADD FOREIGN KEY([roleId])
+REFERENCES [dbo].[ch_role] ([id])
+GO
+/****** 对象:  ForeignKey [FK__ch_user_r__userI__22401542]    脚本日期: 07/31/2017 11:15:06 ******/
+ALTER TABLE [dbo].[ch_user_role]  WITH CHECK ADD FOREIGN KEY([userId])
+REFERENCES [dbo].[Users] ([USER_ID])
+GO
+/****** 对象:  ForeignKey [FK__greenChan__templ__2334397B]    脚本日期: 07/31/2017 11:15:36 ******/
+ALTER TABLE [dbo].[greenChannel]  WITH CHECK ADD FOREIGN KEY([templateId])
+REFERENCES [dbo].[brcTemplate] ([id])
+GO
+/****** 对象:  ForeignKey [FK__media__userId__24285DB4]    脚本日期: 07/31/2017 11:15:52 ******/
+ALTER TABLE [dbo].[media]  WITH CHECK ADD FOREIGN KEY([userId])
+REFERENCES [dbo].[Users] ([USER_ID])
+GO
+/****** 对象:  ForeignKey [FK__monitorHi__devic__251C81ED]    脚本日期: 07/31/2017 11:15:57 ******/
+ALTER TABLE [dbo].[monitorHistory]  WITH CHECK ADD FOREIGN KEY([deviceId])
+REFERENCES [dbo].[Srv] ([SRV_ID])
+GO
+/****** 对象:  ForeignKey [FKACE5D90BE2E94873]    脚本日期: 07/31/2017 11:15:59 ******/
+ALTER TABLE [dbo].[noteControl]  WITH CHECK ADD  CONSTRAINT [FKACE5D90BE2E94873] FOREIGN KEY([userId])
+REFERENCES [dbo].[Users] ([USER_ID])
+GO
+ALTER TABLE [dbo].[noteControl] CHECK CONSTRAINT [FKACE5D90BE2E94873]
+GO
+/****** 对象:  ForeignKey [FK__Organizat__broad__2610A626]    脚本日期: 07/31/2017 11:16:04 ******/
+ALTER TABLE [dbo].[Organization]  WITH CHECK ADD FOREIGN KEY([broadcastRecordId])
+REFERENCES [dbo].[broadcastRecord] ([id])
+GO
+/****** 对象:  ForeignKey [FK__Organizat__paren__2704CA5F]    脚本日期: 07/31/2017 11:16:04 ******/
+ALTER TABLE [dbo].[Organization]  WITH CHECK ADD FOREIGN KEY([parentId])
+REFERENCES [dbo].[Organization] ([ORG_ID])
+GO
+/****** 对象:  ForeignKey [FKB1F7E93E2D30BD9D]    脚本日期: 07/31/2017 11:16:07 ******/
+ALTER TABLE [dbo].[Organization1]  WITH CHECK ADD  CONSTRAINT [FKB1F7E93E2D30BD9D] FOREIGN KEY([broadcastRecordId])
+REFERENCES [dbo].[broadcastRecord] ([id])
+GO
+ALTER TABLE [dbo].[Organization1] CHECK CONSTRAINT [FKB1F7E93E2D30BD9D]
+GO
+/****** 对象:  ForeignKey [FKB1F7E93E5AC08E54]    脚本日期: 07/31/2017 11:16:07 ******/
+ALTER TABLE [dbo].[Organization1]  WITH CHECK ADD  CONSTRAINT [FKB1F7E93E5AC08E54] FOREIGN KEY([parentId])
+REFERENCES [dbo].[Organization1] ([ORG_ID])
+GO
+ALTER TABLE [dbo].[Organization1] CHECK CONSTRAINT [FKB1F7E93E5AC08E54]
+GO
+/****** 对象:  ForeignKey [FK242E0B36E2E94873]    脚本日期: 07/31/2017 11:16:20 ******/
+ALTER TABLE [dbo].[PhoneSingle]  WITH CHECK ADD  CONSTRAINT [FK242E0B36E2E94873] FOREIGN KEY([userId])
+REFERENCES [dbo].[Users] ([USER_ID])
+GO
+ALTER TABLE [dbo].[PhoneSingle] CHECK CONSTRAINT [FK242E0B36E2E94873]
+GO
+/****** 对象:  ForeignKey [FK__program_t__templ__28ED12D1]    脚本日期: 07/31/2017 11:16:33 ******/
+ALTER TABLE [dbo].[program_template]  WITH CHECK ADD FOREIGN KEY([templateId])
+REFERENCES [dbo].[ch_templateManage] ([ID])
+ON UPDATE CASCADE
+GO
+/****** 对象:  ForeignKey [FK__Srv__areaId__29E1370A]    脚本日期: 07/31/2017 11:16:53 ******/
+ALTER TABLE [dbo].[Srv]  WITH CHECK ADD FOREIGN KEY([areaId])
+REFERENCES [dbo].[Organization] ([ORG_ID])
+GO
+/****** 对象:  ForeignKey [FK__Srv__deviceTypeI__2AD55B43]    脚本日期: 07/31/2017 11:16:53 ******/
+ALTER TABLE [dbo].[Srv]  WITH CHECK ADD FOREIGN KEY([deviceTypeId])
+REFERENCES [dbo].[SrvType] ([SRV_ID])
+GO
+/****** 对象:  ForeignKey [FK__Users__departmen__2BC97F7C]    脚本日期: 07/31/2017 11:17:21 ******/
+ALTER TABLE [dbo].[Users]  WITH CHECK ADD FOREIGN KEY([departmentId])
+REFERENCES [dbo].[ch_department] ([id])
+GO

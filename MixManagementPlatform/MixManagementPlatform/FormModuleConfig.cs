@@ -14,6 +14,8 @@ namespace MixManagementPlatform
         private Layouts.TomcatServerConfigLayout pnlTomcat;
         private Layouts.DemultiplexConfigLayout pnlDemultiplex;
         private Layouts.RecordConfigLayout pnlRecord;
+        private Layouts.ReturnserviceConfigLayout pnlReturnservice;//6
+        private Layouts.InstructionServicesConfigLayout pnlInstructionServices;//5
 
         public FormModuleConfig(Form form, int type, string path = null)
         {
@@ -75,6 +77,21 @@ namespace MixManagementPlatform
                     Controls.Add(pnlRecord);
                     Size = new Size(pnlRecord.Width + 15, pnlRecord.Height + 115);
                     break;
+
+                case 5:
+                    pnlInstructionServices = new Layouts.InstructionServicesConfigLayout(path);
+                    pnlInstructionServices.Location = new Point(5, 45);
+                    pnlInstructionServices.BackColor = Color.Transparent;
+                    Controls.Add(pnlInstructionServices);
+                    Size = new Size(pnlInstructionServices.Width + 15, pnlInstructionServices.Height + 115);
+                    break;
+                case 6:
+                    pnlReturnservice = new Layouts.ReturnserviceConfigLayout(path);
+                    pnlReturnservice.Location = new Point(5, 45);
+                    pnlReturnservice.BackColor = Color.Transparent;
+                    Controls.Add(pnlReturnservice);
+                    Size = new Size(pnlReturnservice.Width, pnlReturnservice.Height + 115);
+                    break;
             }
         }
 
@@ -102,6 +119,16 @@ namespace MixManagementPlatform
                 case 4:
                     if (!pnlRecord.ValidateData()) return;
                     saveSuccessed = pnlRecord.SaveData();
+                    break;
+
+                case 5:
+                    if (!pnlInstructionServices.ValidateData()) return;
+                    saveSuccessed = pnlInstructionServices.SaveData();
+                    break;
+
+                case 6:
+                    if (!pnlReturnservice.ValidateData()) return;
+                    saveSuccessed = pnlReturnservice.SaveData();
                     break;
             }
             DialogResult = saveSuccessed ? DialogResult.OK : DialogResult.Ignore;

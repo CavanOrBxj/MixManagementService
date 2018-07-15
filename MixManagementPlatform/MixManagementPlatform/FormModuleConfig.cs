@@ -14,6 +14,7 @@ namespace MixManagementPlatform
         private Layouts.TomcatServerConfigLayout pnlTomcat;
         private Layouts.DemultiplexConfigLayout pnlDemultiplex;
         private Layouts.RecordConfigLayout pnlRecord;
+        private Layouts.RecordConfigLayoutNew pnlRecordNew;
         private Layouts.ReturnserviceConfigLayout pnlReturnservice;//6
         private Layouts.InstructionServicesConfigLayout pnlInstructionServices;//5
 
@@ -71,11 +72,11 @@ namespace MixManagementPlatform
                     Size = new Size(pnlDemultiplex.Width + 15, pnlDemultiplex.Height + 115);
                     break;
                 case 4:
-                    pnlRecord = new Layouts.RecordConfigLayout(path);
-                    pnlRecord.Location = new Point(5, 45);
-                    pnlRecord.BackColor = Color.Transparent;
-                    Controls.Add(pnlRecord);
-                    Size = new Size(pnlRecord.Width + 15, pnlRecord.Height + 115);
+                    pnlRecordNew = new Layouts.RecordConfigLayoutNew(path);
+                    pnlRecordNew.Location = new Point(5, 45);
+                    pnlRecordNew.BackColor = Color.Transparent;
+                    Controls.Add(pnlRecordNew);
+                    Size = new Size(pnlRecordNew.Width + 15, pnlRecordNew.Height + 115);
                     break;
 
                 case 5:
@@ -117,8 +118,8 @@ namespace MixManagementPlatform
                     saveSuccessed = pnlDemultiplex.SaveData();
                     break;
                 case 4:
-                    if (!pnlRecord.ValidateData()) return;
-                    saveSuccessed = pnlRecord.SaveData();
+                    if (!pnlRecordNew.ValidateData()) return;
+                    saveSuccessed = pnlRecordNew.SaveData();
                     break;
 
                 case 5:

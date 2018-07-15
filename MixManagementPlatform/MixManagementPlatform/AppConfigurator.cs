@@ -51,6 +51,20 @@ namespace MixManagementPlatform
         }
 
 
+        public static string GetAppConfig(string strKey, string path)
+        {
+            string file = path;
+            Configuration config = ConfigurationManager.OpenExeConfiguration(file);
+            foreach (string key in config.AppSettings.Settings.AllKeys)
+            {
+                if (key == strKey)
+                {
+                    return config.AppSettings.Settings[strKey].Value;
+                }
+            }
+            return null;
+        }
+
         ///<summary>     
         ///更新连接字符串      
         ///</summary>     
@@ -87,6 +101,24 @@ namespace MixManagementPlatform
             config.Save(ConfigurationSaveMode.Modified);
             // 强制重新载入配置文件的ConnectionStrings配置节      
             ConfigurationManager.RefreshSection("ConnectionStrings");
+        }
+
+        public static void UpdateAppSettingsConfig(string newName, string newValue, string configPath)
+        {
+            string file = configPath;
+            System.Configuration.Configuration config = ConfigurationManager.OpenExeConfiguration(file);
+            bool exist = false;
+            if (config.AppSettings.Settings[newName] != null)
+            {
+                exist = true;
+            }
+            if (exist)
+            {
+                config.AppSettings.Settings.Remove(newName);
+            }
+            config.AppSettings.Settings.Add(newName, newValue);
+            config.Save(ConfigurationSaveMode.Modified);
+            ConfigurationManager.RefreshSection("appSettings");
         }
     }
 }

@@ -23,3 +23,12 @@ D:\ProjectDoc\revision\MixManagementToolServer_未添加新版录音\MixManageme
 D:\ProjectDoc\revision\MixManagementToolServer_未添加新版录音\MixManagementService\MixManagementService\obj\Debug\MixManagementService.csproj.GenerateResource.Cache
 D:\ProjectDoc\revision\MixManagementToolServer_未添加新版录音\MixManagementService\MixManagementService\obj\Debug\MixManagementService.exe
 D:\ProjectDoc\revision\MixManagementToolServer_未添加新版录音\MixManagementService\MixManagementService\obj\Debug\MixManagementService.pdb
+E:\GitHub\融合平台管理工具\MixManagementService\MixManagementService\bin\Debug\MixManagementService.exe.config
+E:\GitHub\融合平台管理工具\MixManagementService\MixManagementService\bin\Debug\MixManagementService.exe
+E:\GitHub\融合平台管理工具\MixManagementService\MixManagementService\bin\Debug\MixManagementService.pdb
+E:\GitHub\融合平台管理工具\MixManagementService\MixManagementService\obj\Debug\MixManagementService.csprojResolveAssemblyReference.cache
+E:\GitHub\融合平台管理工具\MixManagementService\MixManagementService\obj\Debug\MixManagementService.ServiceInstaller.resources
+E:\GitHub\融合平台管理工具\MixManagementService\MixManagementService\obj\Debug\MixManagementService.ToolManagementService.resources
+E:\GitHub\融合平台管理工具\MixManagementService\MixManagementService\obj\Debug\MixManagementService.csproj.GenerateResource.Cache
+E:\GitHub\融合平台管理工具\MixManagementService\MixManagementService\obj\Debug\MixManagementService.exe
+E:\GitHub\融合平台管理工具\MixManagementService\MixManagementService\obj\Debug\MixManagementService.pdb

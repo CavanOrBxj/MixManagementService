@@ -25,7 +25,7 @@ namespace MixManagementPlatform.Layouts
         public TomcatServerConfigLayout(string path)
         {
             InitializeComponent();
-            Size = new Size(420, 230);
+            Size = new Size(420, 430);
             this.path = path;
             if (path != null && !string.IsNullOrWhiteSpace(path))
             {
@@ -60,6 +60,10 @@ namespace MixManagementPlatform.Layouts
                 textAdminUserOrgCode.Text = propertyFileOperator.GetPropertiesText("adminUserOrgCode");
                 textUpdateSrvTime.Text = propertyFileOperator.GetPropertiesText("updateSrvTime");
                 textUpdateSrvStatus.Text = propertyFileOperator.GetPropertiesText("updateSrvStatus");
+                txt_hlsUrl.Text= propertyFileOperator.GetPropertiesText("hlsUrl");
+                txt_hlsMappedUrl.Text= propertyFileOperator.GetPropertiesText("hlsMappedUrl");
+                txt_updateUrl.Text= propertyFileOperator.GetPropertiesText("updateUrl");
+                txt_updateMappedUrl.Text = propertyFileOperator.GetPropertiesText("updateMappedUrl");
 
                 XElement xeWeb = XElement.Load(configPath2);
                 var elements = xeWeb.XPathSelectElements("//*");
@@ -106,6 +110,11 @@ namespace MixManagementPlatform.Layouts
                 propertyFileOperator.SetPropertiesText("adminUserOrgCode", textAdminUserOrgCode.Text.Trim());
                 propertyFileOperator.SetPropertiesText("updateSrvTime", textUpdateSrvTime.Text.Trim());
                 propertyFileOperator.SetPropertiesText("updateSrvStatus", textUpdateSrvStatus.Text.Trim());
+                propertyFileOperator.SetPropertiesText("hlsUrl", txt_hlsUrl.Text.Trim());
+                propertyFileOperator.SetPropertiesText("hlsMappedUrl", txt_hlsMappedUrl.Text.Trim());
+                propertyFileOperator.SetPropertiesText("updateUrl", txt_updateUrl.Text.Trim());
+                propertyFileOperator.SetPropertiesText("updateMappedUrl", txt_updateMappedUrl.Text.Trim());
+
                 return true;
             }
             catch

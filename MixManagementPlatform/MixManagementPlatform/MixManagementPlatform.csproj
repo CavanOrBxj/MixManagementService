@@ -95,6 +95,12 @@
       <DependentUpon>TipPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="EntityModule\Module.cs" />
+    <Compile Include="Layouts\RecordConfigLayoutNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Layouts\RecordConfigLayoutNew.Designer.cs">
+      <DependentUpon>RecordConfigLayoutNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="Layouts\ReturnserviceConfigLayout.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -207,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmServiceSetup.resx">
       <DependentUpon>FrmServiceSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\RecordConfigLayoutNew.resx">
+      <DependentUpon>RecordConfigLayoutNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Layouts\ReturnserviceConfigLayout.resx">
       <DependentUpon>ReturnserviceConfigLayout.cs</DependentUpon>

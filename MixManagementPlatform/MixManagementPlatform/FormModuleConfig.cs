@@ -84,7 +84,8 @@ namespace MixManagementPlatform
                     pnlInstructionServices.Location = new Point(5, 45);
                     pnlInstructionServices.BackColor = Color.Transparent;
                     Controls.Add(pnlInstructionServices);
-                    Size = new Size(pnlInstructionServices.Width + 15, pnlInstructionServices.Height + 115);
+                    // Size = new Size(pnlInstructionServices.Width + 15, pnlInstructionServices.Height + 115);
+                    Size = new Size(pnlInstructionServices.Width +15, pnlInstructionServices.Height+115);
                     break;
                 case 6:
                     pnlReturnservice = new Layouts.ReturnserviceConfigLayout(path);

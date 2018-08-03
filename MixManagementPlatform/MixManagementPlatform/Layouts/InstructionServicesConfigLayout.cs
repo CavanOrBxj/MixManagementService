@@ -17,7 +17,7 @@ namespace MixManagementPlatform.Layouts
         public InstructionServicesConfigLayout(string path)
         {
             InitializeComponent();
-            Size = new Size(369, 423);
+            Size = new Size(395, 563);
 
             InitMicroMode(cbBoxProtocol);
             this.path = path;
@@ -53,6 +53,10 @@ namespace MixManagementPlatform.Layouts
                 textMQServerTopicName.Text = iniFile.ReadString("MQ", "TopicName", "");
 
                 cbBoxProtocol.SelectedValue = iniFile.ReadInteger("ProtocolType", "ProtocolType", 1);
+                textLocalHost.Text= iniFile.ReadString("LocalHost", "IP", "");
+
+                textTCPReceivePort.Text= iniFile.ReadString("TCP", "ReceivePort", "");
+
             }
             catch (Exception e)
             {
@@ -78,6 +82,10 @@ namespace MixManagementPlatform.Layouts
                 iniFile.WriteString("MQ", "TopicName", textMQServerTopicName.Text);
 
                 iniFile.WriteInteger("ProtocolType", "ProtocolType", (int)cbBoxProtocol.SelectedValue);
+
+                iniFile.WriteString("LocalHost", "IP", textLocalHost.Text);
+
+                iniFile.WriteString("TCP", "ReceivePort", textTCPReceivePort.Text);
                 return true;
             }
             catch

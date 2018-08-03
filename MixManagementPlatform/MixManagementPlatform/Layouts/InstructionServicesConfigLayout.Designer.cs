@@ -48,12 +48,22 @@
             this.textMQServerIP = new System.Windows.Forms.TextBox();
             this.lblPORT = new System.Windows.Forms.Label();
             this.lblIP = new System.Windows.Forms.Label();
+            this.separatorLine1 = new MixManagementPlatform.Controls.SeparatorLine();
+            this.textTCPReceivePort = new System.Windows.Forms.TextBox();
+            this.textLocalHost = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel
             // 
             this.panel.BackColor = System.Drawing.Color.Transparent;
+            this.panel.Controls.Add(this.textTCPReceivePort);
+            this.panel.Controls.Add(this.textLocalHost);
+            this.panel.Controls.Add(this.label1);
+            this.panel.Controls.Add(this.label2);
+            this.panel.Controls.Add(this.separatorLine1);
             this.panel.Controls.Add(this.separatorLineSys);
             this.panel.Controls.Add(this.separatorLineLocal);
             this.panel.Controls.Add(this.separatorLineDataBase);
@@ -73,16 +83,15 @@
             this.panel.Controls.Add(this.textMQServerIP);
             this.panel.Controls.Add(this.lblPORT);
             this.panel.Controls.Add(this.lblIP);
-            this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel.Location = new System.Drawing.Point(0, 0);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(396, 423);
+            this.panel.Size = new System.Drawing.Size(379, 549);
             this.panel.TabIndex = 0;
             // 
             // separatorLineSys
             // 
             this.separatorLineSys.LineColor = System.Drawing.Color.Gray;
-            this.separatorLineSys.Location = new System.Drawing.Point(15, 315);
+            this.separatorLineSys.Location = new System.Drawing.Point(5, 315);
             this.separatorLineSys.Name = "separatorLineSys";
             this.separatorLineSys.Size = new System.Drawing.Size(379, 23);
             this.separatorLineSys.TabIndex = 160;
@@ -93,7 +102,7 @@
             // separatorLineLocal
             // 
             this.separatorLineLocal.LineColor = System.Drawing.Color.Gray;
-            this.separatorLineLocal.Location = new System.Drawing.Point(15, 182);
+            this.separatorLineLocal.Location = new System.Drawing.Point(25, 182);
             this.separatorLineLocal.Name = "separatorLineLocal";
             this.separatorLineLocal.Size = new System.Drawing.Size(379, 23);
             this.separatorLineLocal.TabIndex = 158;
@@ -257,6 +266,53 @@
             this.lblIP.TabIndex = 116;
             this.lblIP.Text = "MQIP";
             // 
+            // separatorLine1
+            // 
+            this.separatorLine1.LineColor = System.Drawing.Color.Gray;
+            this.separatorLine1.Location = new System.Drawing.Point(7, 404);
+            this.separatorLine1.Name = "separatorLine1";
+            this.separatorLine1.Size = new System.Drawing.Size(379, 23);
+            this.separatorLine1.TabIndex = 161;
+            this.separatorLine1.Text = "TCP设置";
+            this.separatorLine1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.separatorLine1.TextPaddingLeft = 160;
+            // 
+            // textTCPReceivePort
+            // 
+            this.textTCPReceivePort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textTCPReceivePort.Location = new System.Drawing.Point(118, 482);
+            this.textTCPReceivePort.Name = "textTCPReceivePort";
+            this.textTCPReceivePort.Size = new System.Drawing.Size(196, 21);
+            this.textTCPReceivePort.TabIndex = 163;
+            this.textTCPReceivePort.Tag = "";
+            // 
+            // textLocalHost
+            // 
+            this.textLocalHost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textLocalHost.Location = new System.Drawing.Point(118, 451);
+            this.textLocalHost.Name = "textLocalHost";
+            this.textLocalHost.Size = new System.Drawing.Size(196, 21);
+            this.textLocalHost.TabIndex = 162;
+            this.textLocalHost.Tag = "本机IP";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(34, 486);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 12);
+            this.label1.TabIndex = 165;
+            this.label1.Text = "接收端口";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(34, 455);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 12);
+            this.label2.TabIndex = 164;
+            this.label2.Text = "本机IP";
+            // 
             // InstructionServicesConfigLayout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -266,7 +322,7 @@
             this.Controls.Add(this.panel);
             this.DoubleBuffered = true;
             this.Name = "InstructionServicesConfigLayout";
-            this.Size = new System.Drawing.Size(396, 423);
+            this.Size = new System.Drawing.Size(396, 566);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             this.ResumeLayout(false);
@@ -295,5 +351,10 @@
         private System.Windows.Forms.TextBox textMQServerIP;
         private System.Windows.Forms.Label lblPORT;
         private System.Windows.Forms.Label lblIP;
+        private System.Windows.Forms.TextBox textTCPReceivePort;
+        private System.Windows.Forms.TextBox textLocalHost;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private Controls.SeparatorLine separatorLine1;
     }
 }

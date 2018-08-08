@@ -52,12 +52,34 @@
             this.textIP = new System.Windows.Forms.TextBox();
             this.lblPORT = new System.Windows.Forms.Label();
             this.lblIP = new System.Windows.Forms.Label();
+            this.txtFTPUserName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtFTPPort = new System.Windows.Forms.TextBox();
+            this.txtFTPServer = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.separatorLine1 = new MixManagementPlatform.Controls.SeparatorLine();
+            this.txtftppath = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtFTPPwd = new System.Windows.Forms.TextBox();
             this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel
             // 
             this.panel.BackColor = System.Drawing.Color.Transparent;
+            this.panel.Controls.Add(this.label8);
+            this.panel.Controls.Add(this.txtFTPPwd);
+            this.panel.Controls.Add(this.txtftppath);
+            this.panel.Controls.Add(this.label7);
+            this.panel.Controls.Add(this.txtFTPUserName);
+            this.panel.Controls.Add(this.label4);
+            this.panel.Controls.Add(this.txtFTPPort);
+            this.panel.Controls.Add(this.txtFTPServer);
+            this.panel.Controls.Add(this.label5);
+            this.panel.Controls.Add(this.label6);
+            this.panel.Controls.Add(this.separatorLine1);
             this.panel.Controls.Add(this.textMQTopicName);
             this.panel.Controls.Add(this.label1);
             this.panel.Controls.Add(this.textMQServerPORT);
@@ -84,13 +106,13 @@
             this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel.Location = new System.Drawing.Point(0, 0);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(396, 423);
+            this.panel.Size = new System.Drawing.Size(396, 601);
             this.panel.TabIndex = 0;
             // 
             // textMQTopicName
             // 
             this.textMQTopicName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textMQTopicName.Location = new System.Drawing.Point(118, 391);
+            this.textMQTopicName.Location = new System.Drawing.Point(118, 383);
             this.textMQTopicName.Name = "textMQTopicName";
             this.textMQTopicName.Size = new System.Drawing.Size(215, 21);
             this.textMQTopicName.TabIndex = 162;
@@ -99,7 +121,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 395);
+            this.label1.Location = new System.Drawing.Point(34, 387);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 12);
             this.label1.TabIndex = 165;
@@ -108,7 +130,7 @@
             // textMQServerPORT
             // 
             this.textMQServerPORT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textMQServerPORT.Location = new System.Drawing.Point(118, 356);
+            this.textMQServerPORT.Location = new System.Drawing.Point(118, 354);
             this.textMQServerPORT.Name = "textMQServerPORT";
             this.textMQServerPORT.Size = new System.Drawing.Size(215, 21);
             this.textMQServerPORT.TabIndex = 161;
@@ -126,7 +148,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 360);
+            this.label2.Location = new System.Drawing.Point(34, 358);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 12);
             this.label2.TabIndex = 164;
@@ -144,7 +166,7 @@
             // separatorLineSend
             // 
             this.separatorLineSend.LineColor = System.Drawing.Color.Gray;
-            this.separatorLineSend.Location = new System.Drawing.Point(15, 298);
+            this.separatorLineSend.Location = new System.Drawing.Point(15, 291);
             this.separatorLineSend.Name = "separatorLineSend";
             this.separatorLineSend.Size = new System.Drawing.Size(379, 23);
             this.separatorLineSend.TabIndex = 159;
@@ -155,7 +177,7 @@
             // separatorLineLocal
             // 
             this.separatorLineLocal.LineColor = System.Drawing.Color.Gray;
-            this.separatorLineLocal.Location = new System.Drawing.Point(15, 168);
+            this.separatorLineLocal.Location = new System.Drawing.Point(15, 163);
             this.separatorLineLocal.Name = "separatorLineLocal";
             this.separatorLineLocal.Size = new System.Drawing.Size(379, 23);
             this.separatorLineLocal.TabIndex = 158;
@@ -222,7 +244,7 @@
             // lblLogPass
             // 
             this.lblLogPass.AutoSize = true;
-            this.lblLogPass.Location = new System.Drawing.Point(34, 136);
+            this.lblLogPass.Location = new System.Drawing.Point(34, 134);
             this.lblLogPass.Name = "lblLogPass";
             this.lblLogPass.Size = new System.Drawing.Size(53, 12);
             this.lblLogPass.TabIndex = 115;
@@ -240,7 +262,7 @@
             // textLogPass
             // 
             this.textLogPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textLogPass.Location = new System.Drawing.Point(118, 132);
+            this.textLogPass.Location = new System.Drawing.Point(118, 130);
             this.textLogPass.Name = "textLogPass";
             this.textLogPass.Size = new System.Drawing.Size(215, 21);
             this.textLogPass.TabIndex = 96;
@@ -249,7 +271,7 @@
             // textTCPPORT
             // 
             this.textTCPPORT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textTCPPORT.Location = new System.Drawing.Point(118, 264);
+            this.textTCPPORT.Location = new System.Drawing.Point(118, 260);
             this.textTCPPORT.Name = "textTCPPORT";
             this.textTCPPORT.Size = new System.Drawing.Size(215, 21);
             this.textTCPPORT.TabIndex = 99;
@@ -258,7 +280,7 @@
             // lblMicroPORT
             // 
             this.lblMicroPORT.AutoSize = true;
-            this.lblMicroPORT.Location = new System.Drawing.Point(34, 268);
+            this.lblMicroPORT.Location = new System.Drawing.Point(34, 264);
             this.lblMicroPORT.Name = "lblMicroPORT";
             this.lblMicroPORT.Size = new System.Drawing.Size(47, 12);
             this.lblMicroPORT.TabIndex = 118;
@@ -300,6 +322,107 @@
             this.lblIP.TabIndex = 116;
             this.lblIP.Text = "本机IP";
             // 
+            // txtFTPUserName
+            // 
+            this.txtFTPUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFTPUserName.Location = new System.Drawing.Point(112, 509);
+            this.txtFTPUserName.Name = "txtFTPUserName";
+            this.txtFTPUserName.Size = new System.Drawing.Size(215, 21);
+            this.txtFTPUserName.TabIndex = 169;
+            this.txtFTPUserName.Tag = "";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(28, 513);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 12);
+            this.label4.TabIndex = 172;
+            this.label4.Text = "FTP用户名";
+            // 
+            // txtFTPPort
+            // 
+            this.txtFTPPort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFTPPort.Location = new System.Drawing.Point(112, 478);
+            this.txtFTPPort.Name = "txtFTPPort";
+            this.txtFTPPort.Size = new System.Drawing.Size(215, 21);
+            this.txtFTPPort.TabIndex = 168;
+            this.txtFTPPort.Tag = "UDP端口";
+            // 
+            // txtFTPServer
+            // 
+            this.txtFTPServer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFTPServer.Location = new System.Drawing.Point(112, 447);
+            this.txtFTPServer.Name = "txtFTPServer";
+            this.txtFTPServer.Size = new System.Drawing.Size(215, 21);
+            this.txtFTPServer.TabIndex = 167;
+            this.txtFTPServer.Tag = "";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(28, 482);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 12);
+            this.label5.TabIndex = 171;
+            this.label5.Text = "FTP端口";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(28, 451);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 12);
+            this.label6.TabIndex = 170;
+            this.label6.Text = "FTP服务IP";
+            // 
+            // separatorLine1
+            // 
+            this.separatorLine1.LineColor = System.Drawing.Color.Gray;
+            this.separatorLine1.Location = new System.Drawing.Point(9, 415);
+            this.separatorLine1.Name = "separatorLine1";
+            this.separatorLine1.Size = new System.Drawing.Size(379, 23);
+            this.separatorLine1.TabIndex = 166;
+            this.separatorLine1.Text = "回传设置";
+            this.separatorLine1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.separatorLine1.TextPaddingLeft = 160;
+            // 
+            // txtftppath
+            // 
+            this.txtftppath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtftppath.Location = new System.Drawing.Point(112, 571);
+            this.txtftppath.Name = "txtftppath";
+            this.txtftppath.Size = new System.Drawing.Size(215, 21);
+            this.txtftppath.TabIndex = 173;
+            this.txtftppath.Tag = "TopicName";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(28, 544);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 12);
+            this.label7.TabIndex = 174;
+            this.label7.Text = "FTP密码";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(28, 575);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(47, 12);
+            this.label8.TabIndex = 176;
+            this.label8.Text = "FTP路径";
+            // 
+            // txtFTPPwd
+            // 
+            this.txtFTPPwd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFTPPwd.Location = new System.Drawing.Point(112, 540);
+            this.txtFTPPwd.Name = "txtFTPPwd";
+            this.txtFTPPwd.Size = new System.Drawing.Size(215, 21);
+            this.txtFTPPwd.TabIndex = 175;
+            this.txtFTPPwd.Tag = "";
+            // 
             // ReturnserviceConfigLayout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -309,7 +432,7 @@
             this.Controls.Add(this.panel);
             this.DoubleBuffered = true;
             this.Name = "ReturnserviceConfigLayout";
-            this.Size = new System.Drawing.Size(396, 423);
+            this.Size = new System.Drawing.Size(396, 601);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             this.ResumeLayout(false);
@@ -342,5 +465,16 @@
         private System.Windows.Forms.TextBox textMQServer;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtFTPPwd;
+        private System.Windows.Forms.TextBox txtftppath;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtFTPUserName;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtFTPPort;
+        private System.Windows.Forms.TextBox txtFTPServer;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private Controls.SeparatorLine separatorLine1;
     }
 }

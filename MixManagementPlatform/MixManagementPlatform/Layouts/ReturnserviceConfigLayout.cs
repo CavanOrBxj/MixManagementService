@@ -17,7 +17,7 @@ namespace MixManagementPlatform.Layouts
         public ReturnserviceConfigLayout(string path)
         {
             InitializeComponent();
-            Size = new Size(369, 423);
+            Size = new Size(369, 601);
             this.path = path;
             if (path != null && !string.IsNullOrWhiteSpace(path))
             {
@@ -45,12 +45,20 @@ namespace MixManagementPlatform.Layouts
                 textDataBase.Text = iniFile.ReadString("Database", "DataBase", "");
                 textLogID.Text = iniFile.ReadString("Database", "LogID", "");
                 textLogPass.Text = iniFile.ReadString("Database", "LogPass", "");
+
                 textIP.Text= iniFile.ReadString("LocalHost", "LoaclIP", "");
                 textUDPPORT.Text= iniFile.ReadString("LocalHost", "UDPLocalPort", "");
                 textTCPPORT.Text= iniFile.ReadString("LocalHost", "TCPLocalPort", "");
+
                 textMQServer.Text = iniFile.ReadString("MQ", "MQIP", "");
                 textMQServerPORT.Text = iniFile.ReadString("MQ", "MQPORT", "");
                 textMQTopicName.Text = iniFile.ReadString("MQ", "TopicName", "");
+
+                txtFTPServer.Text = iniFile.ReadString("Reback", "FTPServer", "");
+                txtFTPPort.Text = iniFile.ReadString("Reback", "FTPPort", "");
+                txtFTPUserName.Text = iniFile.ReadString("Reback", "FTPUserName", "");
+                txtFTPPwd.Text = iniFile.ReadString("Reback", "FTPPwd", "");
+                txtftppath.Text = iniFile.ReadString("Reback", "ftppath", "");
 
 
             }
@@ -75,13 +83,19 @@ namespace MixManagementPlatform.Layouts
 
                 iniFile.WriteString("LocalHost", "LoaclIP", textIP.Text.Trim());
                 iniFile.WriteString("LocalHost", "UDPLocalPort", textUDPPORT.Text.Trim());
-                iniFile.WriteString("LocalHost", "textTCPPORT", textIP.Text.Trim());
+                iniFile.WriteString("LocalHost", "TCPLocalPort", textTCPPORT.Text.Trim());
 
 
                 iniFile.WriteString("MQ", "MQIP", textMQServer.Text.Trim());
                 iniFile.WriteString("MQ", "MQPORT", textMQServerPORT.Text.Trim());
                 iniFile.WriteString("MQ", "TopicName", textMQTopicName.Text.Trim());
 
+
+                iniFile.WriteString("Reback", "FTPServer", txtFTPServer.Text.Trim());
+                iniFile.WriteString("Reback", "FTPPort", txtFTPPort.Text.Trim());
+                iniFile.WriteString("Reback", "FTPUserName", txtFTPUserName.Text.Trim());
+                iniFile.WriteString("Reback", "FTPPwd", txtFTPPwd.Text.Trim());
+                iniFile.WriteString("Reback", "ftppath", txtftppath.Text.Trim());
 
                 return true;
             }

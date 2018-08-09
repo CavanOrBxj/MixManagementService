@@ -421,3 +421,19 @@
 正在移除 EventLog 源 MixManagementService。
 正在从系统中移除服务 MixManagementService...
 已成功地从系统中移除服务 MixManagementService。
+Uninstalling assembly 'D:\GitHub\MixManagementService\MixManagementPlatform\MixManagementPlatform\bin\Debug\MixManagementService.exe'.
+Affected parameters are:
+   assemblypath = D:\GitHub\MixManagementService\MixManagementPlatform\MixManagementPlatform\bin\Debug\MixManagementService.exe
+   logfile = D:\GitHub\MixManagementService\MixManagementPlatform\MixManagementPlatform\bin\Debug\MixManagementService.InstallLog
+Removing EventLog source MixManagementService.
+An exception occurred during the uninstallation of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: Requested registry access is not allowed.
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Uninstalling assembly 'D:\GitHub\MixManagementService\MixManagementPlatform\MixManagementPlatform\bin\Debug\MixManagementService.exe'.
+Affected parameters are:
+   assemblypath = D:\GitHub\MixManagementService\MixManagementPlatform\MixManagementPlatform\bin\Debug\MixManagementService.exe
+   logfile = D:\GitHub\MixManagementService\MixManagementPlatform\MixManagementPlatform\bin\Debug\MixManagementService.InstallLog
+Removing EventLog source MixManagementService.
+An exception occurred during the uninstallation of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: Requested registry access is not allowed.
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.

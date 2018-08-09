@@ -19,7 +19,7 @@ namespace MixManagementPlatform
 {
     public partial class FormMain : UserForm
     {
-        public static readonly string[] ModuleType = new string[] { "智能广播服务管理平台", "CMDServer", "Tomcat服务", "解复用", "录音","TS指令服务","回传服务" };
+        public static readonly string[] ModuleType = new string[] { "智能广播服务管理平台", "CMDServer", "Tomcat服务", "解复用", "录音","TS指令服务","回传服务", "电话平台", "WAV转MP3", "天安密码器服务", "对接服务" };
 
         private SqlServerLogic sqlServer;
         private BindingCollection<TModule> moduleList;

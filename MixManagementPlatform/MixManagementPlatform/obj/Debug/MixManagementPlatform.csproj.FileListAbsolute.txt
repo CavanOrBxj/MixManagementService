@@ -119,3 +119,5 @@ E:\GitHub\MixManagementService\MixManagementPlatform\MixManagementPlatform\obj\D
 D:\GitHub\MixManagementService\MixManagementPlatform\MixManagementPlatform\obj\Debug\MixManagementPlatform.csprojAssemblyReference.cache
 D:\GitHub\MixManagementService\MixManagementPlatform\MixManagementPlatform\obj\Debug\MixManagementPlatform.csproj.CoreCompileInputs.cache
 D:\GitHub\MixManagementService\MixManagementPlatform\MixManagementPlatform\obj\Debug\MixManagementPlatform.csproj.CopyComplete
+D:\GitHub\MixManagementService\MixManagementPlatform\MixManagementPlatform\obj\Debug\MixManagementPlatform.Layouts.Universaldisplay.resources
+D:\GitHub\MixManagementService\MixManagementPlatform\MixManagementPlatform\obj\Debug\MixManagementPlatform.Layouts.WAV2MP3.resources

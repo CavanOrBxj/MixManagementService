@@ -154,6 +154,26 @@ namespace MixManagementPlatform
             dr["Display"] = FormMain.ModuleType[6];
             dr["Value"] = 6;
             dt.Rows.Add(dr);
+
+            dr = dt.NewRow();
+            dr["Display"] = FormMain.ModuleType[7];
+            dr["Value"] = 7;
+            dt.Rows.Add(dr);
+
+            dr = dt.NewRow();
+            dr["Display"] = FormMain.ModuleType[8];
+            dr["Value"] = 8;
+            dt.Rows.Add(dr);
+
+            dr = dt.NewRow();
+            dr["Display"] = FormMain.ModuleType[9];
+            dr["Value"] = 9;
+            dt.Rows.Add(dr);
+
+            dr = dt.NewRow();
+            dr["Display"] = FormMain.ModuleType[10];
+            dr["Value"] = 10;
+            dt.Rows.Add(dr);
             box.DisplayMember = "Display";
             box.ValueMember = "Value";
             box.DataSource = dt;
@@ -192,6 +212,26 @@ namespace MixManagementPlatform
                     case 6:
                         textBoxName.Text = FormMain.ModuleType[6];
                         textBoxArguments.Text = "";
+                        break;
+
+                    case 7:
+                        textBoxName.Text = FormMain.ModuleType[7];
+                        textBoxArguments.Text = "";
+                        break;
+
+                    case 8:
+                        textBoxName.Text = FormMain.ModuleType[8];
+                        textBoxArguments.Text = "";
+                        break;
+
+                    case 9:
+                        textBoxName.Text = FormMain.ModuleType[9];
+                        textBoxArguments.Text = "";
+                        break;
+
+                    case 10:
+                        textBoxName.Text = FormMain.ModuleType[10];
+                        textBoxArguments.Text = "001 user 001";
                         break;
                 }
                 checkBoxAutoStart.Checked = true;

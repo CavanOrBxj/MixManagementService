@@ -95,6 +95,18 @@
       <DependentUpon>TipPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="EntityModule\Module.cs" />
+    <Compile Include="Layouts\Universaldisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Layouts\Universaldisplay.Designer.cs">
+      <DependentUpon>Universaldisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\WAV2MP3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Layouts\WAV2MP3.Designer.cs">
+      <DependentUpon>WAV2MP3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Layouts\RecordConfigLayoutNew.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -213,6 +225,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmServiceSetup.resx">
       <DependentUpon>FrmServiceSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\Universaldisplay.resx">
+      <DependentUpon>Universaldisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\WAV2MP3.resx">
+      <DependentUpon>WAV2MP3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Layouts\RecordConfigLayoutNew.resx">
       <DependentUpon>RecordConfigLayoutNew.cs</DependentUpon>

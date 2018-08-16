@@ -10,7 +10,7 @@ namespace MixManagementPlatform.Layouts
     public partial class Universaldisplay : UserControl
     {
         private string path;
-        private bool hasConfigFile; //是否存在对应的配置文件
+      //  private bool hasConfigFile; //是否存在对应的配置文件
 
         public Universaldisplay(string path)
         {

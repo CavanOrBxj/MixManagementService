@@ -114,7 +114,7 @@ namespace MixManagementPlatform
                     pnluniversal.Location = new Point(5, 45);
                     pnluniversal.BackColor = Color.Transparent;
                     Controls.Add(pnluniversal);
-                    Size = new Size(pnluniversal.Width, pnlwav2mp3.Height + 115);
+                    Size = new Size(pnluniversal.Width, pnluniversal.Height + 115);
                     break;
             }
         }
@@ -158,6 +158,12 @@ namespace MixManagementPlatform
                 case 8:
                     if (!pnlwav2mp3.ValidateData()) return;
                     saveSuccessed = pnlwav2mp3.SaveData();
+                    break;
+
+                case 7:
+                case 9:
+                case 10:
+                    saveSuccessed = true;
                     break;
             }
             DialogResult = saveSuccessed ? DialogResult.OK : DialogResult.Ignore;

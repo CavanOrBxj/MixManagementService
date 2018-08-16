@@ -39,8 +39,10 @@ namespace MixManagementPlatform.Layouts
                     MessageBox.Show(this, "配置文件不存在");
                     return;
                 }
-                txtWAVFilePath.Text = AppConfigurator.GetAppConfig("BasePath", configPath);
-                txtMP3FilePath.Text = AppConfigurator.GetAppConfig("MonBasePath", configPath);
+
+                if (iniFile == null) iniFile = new IniFileOperator(configPath);
+                txtWAVFilePath.Text = iniFile.ReadString("FilesPath", "WavFilesPath", "");
+                txtMP3FilePath.Text = iniFile.ReadString("FilesPath", "Mp3FilesPath", "");
             }
             catch (Exception e)
             {
@@ -55,9 +57,12 @@ namespace MixManagementPlatform.Layouts
             {
                 if (!hasConfigFile) return false;
                 string configPath = Path.Combine(Path.GetDirectoryName(path), "Config.ini");
-                
-                AppConfigurator.UpdateAppSettingsConfig("BasePath", txtWAVFilePath.Text, configPath);
-                AppConfigurator.UpdateAppSettingsConfig("MonBasePath", txtMP3FilePath.Text, configPath);
+
+
+                if (iniFile == null) iniFile = new IniFileOperator(configPath);
+
+                iniFile.WriteString("FilesPath", "WavFilesPath", txtWAVFilePath.Text);
+                iniFile.WriteString("FilesPath", "Mp3FilesPath", txtMP3FilePath.Text);
                 return true;
             }
             catch

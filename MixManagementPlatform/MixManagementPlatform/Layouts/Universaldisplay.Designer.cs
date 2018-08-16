@@ -50,7 +50,7 @@
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Name = "Universaldisplay";
-            this.Size = new System.Drawing.Size(385, 220);
+            this.Size = new System.Drawing.Size(368, 211);
             this.ResumeLayout(false);
             this.PerformLayout();
 

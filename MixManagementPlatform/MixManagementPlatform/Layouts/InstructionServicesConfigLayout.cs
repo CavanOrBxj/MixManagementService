@@ -57,6 +57,14 @@ namespace MixManagementPlatform.Layouts
 
                 textTCPReceivePort.Text= iniFile.ReadString("TCP", "ReceivePort", "");
 
+
+                textElementaryPid.Text = iniFile.ReadString("TSSendInfo", "ElementaryPid", "");
+                textStream_id.Text = iniFile.ReadString("TSSendInfo", "Stream_id", "");
+                textProgram_id.Text = iniFile.ReadString("TSSendInfo", "Program_id", "");
+                textPMT_Pid.Text = iniFile.ReadString("TSSendInfo", "PMT_Pid", "");
+                textSection_length.Text = iniFile.ReadString("TSSendInfo", "Section_length", "");
+                textsDestSockAddress.Text = iniFile.ReadString("TSSendInfo", "sDestSockAddress", "");
+                textStream_BitRate.Text = iniFile.ReadString("TSSendInfo", "Stream_BitRate", "");
             }
             catch (Exception e)
             {
@@ -86,6 +94,16 @@ namespace MixManagementPlatform.Layouts
                 iniFile.WriteString("LocalHost", "IP", textLocalHost.Text);
 
                 iniFile.WriteString("TCP", "ReceivePort", textTCPReceivePort.Text);
+
+
+
+                iniFile.WriteString("TSSendInfo", "ElementaryPid", textElementaryPid.Text);
+                iniFile.WriteString("TSSendInfo", "PMT_Pid", textPMT_Pid.Text);
+                iniFile.WriteString("TSSendInfo", "Program_id", textProgram_id.Text);
+                iniFile.WriteString("TSSendInfo", "sDestSockAddress", textsDestSockAddress.Text);
+                iniFile.WriteString("TSSendInfo", "Section_length", textSection_length.Text);
+                iniFile.WriteString("TSSendInfo", "Stream_BitRate", textStream_BitRate.Text);
+                iniFile.WriteString("TSSendInfo", "Stream_id", textStream_id.Text);
                 return true;
             }
             catch

@@ -30,10 +30,6 @@
         {
             this.panel = new System.Windows.Forms.Panel();
             this.lbl1 = new System.Windows.Forms.Label();
-            this.separatorLineSys = new MixManagementPlatform.Controls.SeparatorLine();
-            this.separatorLineSend = new MixManagementPlatform.Controls.SeparatorLine();
-            this.separatorLineLocal = new MixManagementPlatform.Controls.SeparatorLine();
-            this.separatorLineDataBase = new MixManagementPlatform.Controls.SeparatorLine();
             this.lblServerName = new System.Windows.Forms.Label();
             this.lblDataBase = new System.Windows.Forms.Label();
             this.textServerName = new System.Windows.Forms.TextBox();
@@ -97,11 +93,19 @@
             this.textIP = new System.Windows.Forms.TextBox();
             this.lblPORT = new System.Windows.Forms.Label();
             this.lblIP = new System.Windows.Forms.Label();
+            this.textGBSTUDIONO = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.separatorLineSys = new MixManagementPlatform.Controls.SeparatorLine();
+            this.separatorLineSend = new MixManagementPlatform.Controls.SeparatorLine();
+            this.separatorLineLocal = new MixManagementPlatform.Controls.SeparatorLine();
+            this.separatorLineDataBase = new MixManagementPlatform.Controls.SeparatorLine();
             this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel
             // 
+            this.panel.Controls.Add(this.textGBSTUDIONO);
+            this.panel.Controls.Add(this.label1);
             this.panel.Controls.Add(this.lbl1);
             this.panel.Controls.Add(this.separatorLineSys);
             this.panel.Controls.Add(this.separatorLineSend);
@@ -172,7 +176,7 @@
             this.panel.Controls.Add(this.lblIP);
             this.panel.Location = new System.Drawing.Point(0, 0);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(409, 1205);
+            this.panel.Size = new System.Drawing.Size(399, 1249);
             this.panel.TabIndex = 0;
             // 
             // lbl1
@@ -183,50 +187,6 @@
             this.lbl1.Size = new System.Drawing.Size(11, 12);
             this.lbl1.TabIndex = 161;
             this.lbl1.Text = "-";
-            // 
-            // separatorLineSys
-            // 
-            this.separatorLineSys.LineColor = System.Drawing.Color.Gray;
-            this.separatorLineSys.Location = new System.Drawing.Point(15, 780);
-            this.separatorLineSys.Name = "separatorLineSys";
-            this.separatorLineSys.Size = new System.Drawing.Size(379, 23);
-            this.separatorLineSys.TabIndex = 160;
-            this.separatorLineSys.Text = "系统设置";
-            this.separatorLineSys.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.separatorLineSys.TextPaddingLeft = 160;
-            // 
-            // separatorLineSend
-            // 
-            this.separatorLineSend.LineColor = System.Drawing.Color.Gray;
-            this.separatorLineSend.Location = new System.Drawing.Point(15, 400);
-            this.separatorLineSend.Name = "separatorLineSend";
-            this.separatorLineSend.Size = new System.Drawing.Size(379, 23);
-            this.separatorLineSend.TabIndex = 159;
-            this.separatorLineSend.Text = "发送设置";
-            this.separatorLineSend.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.separatorLineSend.TextPaddingLeft = 160;
-            // 
-            // separatorLineLocal
-            // 
-            this.separatorLineLocal.LineColor = System.Drawing.Color.Gray;
-            this.separatorLineLocal.Location = new System.Drawing.Point(15, 182);
-            this.separatorLineLocal.Name = "separatorLineLocal";
-            this.separatorLineLocal.Size = new System.Drawing.Size(379, 23);
-            this.separatorLineLocal.TabIndex = 158;
-            this.separatorLineLocal.Text = "本机地址设置";
-            this.separatorLineLocal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.separatorLineLocal.TextPaddingLeft = 148;
-            // 
-            // separatorLineDataBase
-            // 
-            this.separatorLineDataBase.LineColor = System.Drawing.Color.Gray;
-            this.separatorLineDataBase.Location = new System.Drawing.Point(15, 8);
-            this.separatorLineDataBase.Name = "separatorLineDataBase";
-            this.separatorLineDataBase.Size = new System.Drawing.Size(379, 23);
-            this.separatorLineDataBase.TabIndex = 157;
-            this.separatorLineDataBase.Text = "数据库";
-            this.separatorLineDataBase.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.separatorLineDataBase.TextPaddingLeft = 166;
             // 
             // lblServerName
             // 
@@ -796,6 +756,68 @@
             this.lblIP.TabIndex = 116;
             this.lblIP.Text = "本机IP";
             // 
+            // textGBSTUDIONO
+            // 
+            this.textGBSTUDIONO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textGBSTUDIONO.Location = new System.Drawing.Point(117, 1208);
+            this.textGBSTUDIONO.Name = "textGBSTUDIONO";
+            this.textGBSTUDIONO.Size = new System.Drawing.Size(264, 21);
+            this.textGBSTUDIONO.TabIndex = 162;
+            this.textGBSTUDIONO.Tag = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(34, 1212);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 12);
+            this.label1.TabIndex = 163;
+            this.label1.Text = "平台号";
+            // 
+            // separatorLineSys
+            // 
+            this.separatorLineSys.LineColor = System.Drawing.Color.Gray;
+            this.separatorLineSys.Location = new System.Drawing.Point(15, 780);
+            this.separatorLineSys.Name = "separatorLineSys";
+            this.separatorLineSys.Size = new System.Drawing.Size(379, 23);
+            this.separatorLineSys.TabIndex = 160;
+            this.separatorLineSys.Text = "系统设置";
+            this.separatorLineSys.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.separatorLineSys.TextPaddingLeft = 160;
+            // 
+            // separatorLineSend
+            // 
+            this.separatorLineSend.LineColor = System.Drawing.Color.Gray;
+            this.separatorLineSend.Location = new System.Drawing.Point(15, 400);
+            this.separatorLineSend.Name = "separatorLineSend";
+            this.separatorLineSend.Size = new System.Drawing.Size(379, 23);
+            this.separatorLineSend.TabIndex = 159;
+            this.separatorLineSend.Text = "发送设置";
+            this.separatorLineSend.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.separatorLineSend.TextPaddingLeft = 160;
+            // 
+            // separatorLineLocal
+            // 
+            this.separatorLineLocal.LineColor = System.Drawing.Color.Gray;
+            this.separatorLineLocal.Location = new System.Drawing.Point(15, 182);
+            this.separatorLineLocal.Name = "separatorLineLocal";
+            this.separatorLineLocal.Size = new System.Drawing.Size(379, 23);
+            this.separatorLineLocal.TabIndex = 158;
+            this.separatorLineLocal.Text = "本机地址设置";
+            this.separatorLineLocal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.separatorLineLocal.TextPaddingLeft = 148;
+            // 
+            // separatorLineDataBase
+            // 
+            this.separatorLineDataBase.LineColor = System.Drawing.Color.Gray;
+            this.separatorLineDataBase.Location = new System.Drawing.Point(15, 8);
+            this.separatorLineDataBase.Name = "separatorLineDataBase";
+            this.separatorLineDataBase.Size = new System.Drawing.Size(379, 23);
+            this.separatorLineDataBase.TabIndex = 157;
+            this.separatorLineDataBase.Text = "数据库";
+            this.separatorLineDataBase.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.separatorLineDataBase.TextPaddingLeft = 166;
+            // 
             // TsSheduleCenterConfigLayout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -805,7 +827,7 @@
             this.Controls.Add(this.panel);
             this.DoubleBuffered = true;
             this.Name = "TsSheduleCenterConfigLayout";
-            this.Size = new System.Drawing.Size(396, 423);
+            this.Size = new System.Drawing.Size(382, 784);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             this.ResumeLayout(false);
@@ -883,5 +905,7 @@
         private System.Windows.Forms.Label lblPORT;
         private System.Windows.Forms.Label lblIP;
         private System.Windows.Forms.Label lbl1;
+        private System.Windows.Forms.TextBox textGBSTUDIONO;
+        private System.Windows.Forms.Label label1;
     }
 }

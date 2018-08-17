@@ -17,7 +17,7 @@ namespace MixManagementPlatform.Layouts
         public TsSheduleCenterConfigLayout(string path)
         {
             InitializeComponent();
-            Size = new Size(430, 440);
+            Size = new Size(430, 784);
 
             InitMicroMode(cbBoxMICROMODE);
             this.path = path;
@@ -76,6 +76,9 @@ namespace MixManagementPlatform.Layouts
                 textPORTH.Text = iniFile.ReadString("SYSSET", "PORTH", "");
                 textLOCALPATH.Text = iniFile.ReadString("SYSSET", "LOCALPATH", "");
                 textURLPATH.Text = iniFile.ReadString("SYSSET", "URLPATH", "");
+                textGBSTUDIONO.Text = iniFile.ReadString("SYSSET", "GBSTUDIONO", "");
+
+
 
                 textLEDtxtLenth.Text = iniFile.ReadString("LED", "LEDtxtLenth", "");
             }
@@ -126,6 +129,9 @@ namespace MixManagementPlatform.Layouts
                 iniFile.WriteString("SYSSET", "PORTH", textPORTH.Text);
                 iniFile.WriteString("SYSSET", "LOCALPATH", textLOCALPATH.Text);
                 iniFile.WriteString("SYSSET", "URLPATH", textURLPATH.Text);
+                iniFile.WriteString("SYSSET", "GBSTUDIONO", textGBSTUDIONO.Text);
+
+
 
                 iniFile.WriteString("LED", "LEDtxtLenth", textLEDtxtLenth.Text);
                 return true;

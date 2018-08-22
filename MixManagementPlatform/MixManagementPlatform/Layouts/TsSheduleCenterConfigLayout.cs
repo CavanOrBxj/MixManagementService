@@ -77,7 +77,7 @@ namespace MixManagementPlatform.Layouts
                 textLOCALPATH.Text = iniFile.ReadString("SYSSET", "LOCALPATH", "");
                 textURLPATH.Text = iniFile.ReadString("SYSSET", "URLPATH", "");
                 textGBSTUDIONO.Text = iniFile.ReadString("SYSSET", "GBSTUDIONO", "");
-
+                textSTUDIONO.Text= iniFile.ReadString("SYSSET", "STUDIONO", "");
 
 
                 textLEDtxtLenth.Text = iniFile.ReadString("LED", "LEDtxtLenth", "");
@@ -130,7 +130,7 @@ namespace MixManagementPlatform.Layouts
                 iniFile.WriteString("SYSSET", "LOCALPATH", textLOCALPATH.Text);
                 iniFile.WriteString("SYSSET", "URLPATH", textURLPATH.Text);
                 iniFile.WriteString("SYSSET", "GBSTUDIONO", textGBSTUDIONO.Text);
-
+                iniFile.WriteString("SYSSET", "STUDIONO", textSTUDIONO.Text);
 
 
                 iniFile.WriteString("LED", "LEDtxtLenth", textLEDtxtLenth.Text);

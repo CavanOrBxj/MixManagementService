@@ -46,7 +46,6 @@ D:\GitHub\MixManagementService\MixManagementService\obj\Debug\MixManagementServi
 E:\GitHub\MixManagementService\MixManagementService\bin\Debug\MixManagementService.exe.config
 E:\GitHub\MixManagementService\MixManagementService\bin\Debug\MixManagementService.exe
 E:\GitHub\MixManagementService\MixManagementService\bin\Debug\MixManagementService.pdb
-E:\GitHub\MixManagementService\MixManagementService\obj\Debug\MixManagementService.csprojResolveAssemblyReference.cache
 E:\GitHub\MixManagementService\MixManagementService\obj\Debug\MixManagementService.ServiceInstaller.resources
 E:\GitHub\MixManagementService\MixManagementService\obj\Debug\MixManagementService.ToolManagementService.resources
 E:\GitHub\MixManagementService\MixManagementService\obj\Debug\MixManagementService.csproj.GenerateResource.Cache

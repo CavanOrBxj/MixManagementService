@@ -25,7 +25,7 @@ namespace MixManagementPlatform.Layouts
         public TomcatServerConfigLayout(string path)
         {
             InitializeComponent();
-            Size = new Size(420, 430);
+            Size = new Size(420, 655);
             this.path = path;
             if (path != null && !string.IsNullOrWhiteSpace(path))
             {
@@ -64,6 +64,18 @@ namespace MixManagementPlatform.Layouts
                 txt_hlsMappedUrl.Text= propertyFileOperator.GetPropertiesText("hlsMappedUrl");
                 txt_updateUrl.Text= propertyFileOperator.GetPropertiesText("updateUrl");
                 txt_updateMappedUrl.Text = propertyFileOperator.GetPropertiesText("updateMappedUrl");
+
+                txtaudioInnerNet.Text = propertyFileOperator.GetPropertiesText("audioInnerNet");
+                txtaudioInnerPort.Text = propertyFileOperator.GetPropertiesText("audioInnerPort");
+                txtaudioOuterNet.Text = propertyFileOperator.GetPropertiesText("audioOuterNet");
+                txtaudioOuterPort.Text = propertyFileOperator.GetPropertiesText("audioOuterPort");
+                txtinnerNet.Text = propertyFileOperator.GetPropertiesText("innerNet");
+                txtinnerPort.Text = propertyFileOperator.GetPropertiesText("innerPort");
+                txtouterNet.Text = propertyFileOperator.GetPropertiesText("outerNet");
+                txtouterPort.Text = propertyFileOperator.GetPropertiesText("outerPort");
+
+
+
 
                 XElement xeWeb = XElement.Load(configPath2);
                 var elements = xeWeb.XPathSelectElements("//*");
@@ -115,6 +127,20 @@ namespace MixManagementPlatform.Layouts
                 propertyFileOperator.SetPropertiesText("updateUrl", txt_updateUrl.Text.Trim());
                 propertyFileOperator.SetPropertiesText("updateMappedUrl", txt_updateMappedUrl.Text.Trim());
 
+
+                propertyFileOperator.SetPropertiesText("audioInnerNet", txtaudioInnerNet.Text.Trim());
+                propertyFileOperator.SetPropertiesText("audioInnerPort", txtaudioInnerPort.Text.Trim());
+                propertyFileOperator.SetPropertiesText("audioOuterNet", txtaudioOuterNet.Text.Trim());
+                propertyFileOperator.SetPropertiesText("audioOuterPort", txtaudioOuterPort.Text.Trim());
+                propertyFileOperator.SetPropertiesText("innerNet", txtinnerNet.Text.Trim());
+                propertyFileOperator.SetPropertiesText("innerPort", txtinnerPort.Text.Trim());
+                propertyFileOperator.SetPropertiesText("outerNet", txtouterNet.Text.Trim());
+                propertyFileOperator.SetPropertiesText("outerPort", txtouterPort.Text.Trim());
+
+
+
+
+
                 return true;
             }
             catch
@@ -150,5 +176,7 @@ namespace MixManagementPlatform.Layouts
                 e.Graphics.FillRectangle(Brushes.Transparent, ClientRectangle);
             }
         }
+
+     
     }
 }

@@ -51,3 +51,6 @@ E:\GitHub\MixManagementService\MixManagementService\obj\Debug\MixManagementServi
 E:\GitHub\MixManagementService\MixManagementService\obj\Debug\MixManagementService.csproj.GenerateResource.Cache
 E:\GitHub\MixManagementService\MixManagementService\obj\Debug\MixManagementService.exe
 E:\GitHub\MixManagementService\MixManagementService\obj\Debug\MixManagementService.pdb
+E:\GitHub\MixManagementService\MixManagementService\obj\Debug\MixManagementService.csprojAssemblyReference.cache
+E:\GitHub\MixManagementService\MixManagementService\obj\Debug\MixManagementService.csproj.CoreCompileInputs.cache
+E:\GitHub\MixManagementService\MixManagementService\obj\Debug\MixManagementService.csproj.CopyComplete

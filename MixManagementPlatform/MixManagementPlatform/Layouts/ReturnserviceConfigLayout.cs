@@ -64,7 +64,7 @@ namespace MixManagementPlatform.Layouts
             }
             catch (Exception e)
             {
-                MixLogHelper.Error(GetType().Name, "初始化回传服务配置文件异常", e.StackTrace);
+                MixLogHelper.Error(GetType().Name, "初始化广西协议回传服务配置文件异常", e.StackTrace);
             }
         }
 

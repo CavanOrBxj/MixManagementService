@@ -136,11 +136,7 @@ namespace MixManagementPlatform.Layouts
                 propertyFileOperator.SetPropertiesText("innerPort", txtinnerPort.Text.Trim());
                 propertyFileOperator.SetPropertiesText("outerNet", txtouterNet.Text.Trim());
                 propertyFileOperator.SetPropertiesText("outerPort", txtouterPort.Text.Trim());
-
-
-
-
-
+                
                 return true;
             }
             catch
@@ -149,6 +145,10 @@ namespace MixManagementPlatform.Layouts
             }
         }
 
+        /// <summary>
+        /// 界面判空  20190107  根据陈良要求  把这部分去除
+        /// </summary>
+        /// <returns></returns>
         public bool ValidateData()
         {
             foreach (Control c in Controls)

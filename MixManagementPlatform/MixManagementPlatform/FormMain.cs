@@ -19,7 +19,7 @@ namespace MixManagementPlatform
 {
     public partial class FormMain : UserForm
     {
-        public static readonly string[] ModuleType = new string[] { "智能广播服务管理平台", "CMDServer", "Tomcat服务", "解复用", "录音","TS指令服务","回传服务", "电话平台", "WAV转MP3", "天安密码器服务", "对接服务" };
+        public static readonly string[] ModuleType = new string[] { "智能广播服务管理平台", "CMDServer", "Tomcat服务", "解复用", "录音","TS指令服务","广西协议回传服务", "电话平台", "WAV转MP3", "天安密码器服务", "对接服务","图南回传服务" };
 
         private SqlServerLogic sqlServer;
         private BindingCollection<TModule> moduleList;
@@ -42,8 +42,8 @@ namespace MixManagementPlatform
             BackBrush = new System.Drawing.Drawing2D.LinearGradientBrush(ClientRectangle,
                 Color.FromArgb(150, 210, 255, 220), Color.White, 90);
             BackAngle = 45;
-            lblVersion.Text = "版本号：" + Application.ProductVersion;
-            lblVersion.Location = new Point(Width - lblVersion.Width - 2, Height - lblVersion.Height - 2);
+            this.Text = "融合平台管理工具_V" + Application.ProductVersion;
+          //  lblVersion.Location = new Point(Width - lblVersion.Width - 2, Height - lblVersion.Height - 2);
 
             flag = modeflag;
             if (flag)//显示为设置模式
@@ -617,11 +617,20 @@ namespace MixManagementPlatform
                         process.EnableRaisingEvents = true;
                         process.Exited += Process_Exited;
                         //进程最小化
-                        while (process.MainWindowHandle == IntPtr.Zero)
+                        if (process.ProcessName == "JT")
                         {
-                            Thread.Sleep(100);
+                            //特殊处理  20190107
+                            ControlAstro.Native.WinApi.ShowWindow(process.MainWindowHandle, (int)ControlAstro.Native.WinApi.nCmdShowWindow.SW_SHOWMINIMIZED);
                         }
-                        ControlAstro.Native.WinApi.ShowWindow(process.MainWindowHandle, (int)ControlAstro.Native.WinApi.nCmdShowWindow.SW_SHOWMINIMIZED);
+                        else
+                        {
+                            while (process.MainWindowHandle == IntPtr.Zero)
+                            {
+                                Thread.Sleep(100);
+                            }
+                            ControlAstro.Native.WinApi.ShowWindow(process.MainWindowHandle, (int)ControlAstro.Native.WinApi.nCmdShowWindow.SW_SHOWMINIMIZED);
+                        }
+                       
                     }
                     lock (processDic)
                     {
@@ -658,7 +667,18 @@ namespace MixManagementPlatform
                     Process p = Process.GetProcessById(key);
                     if (p != null && key != 0)
                     {
-                        var hasClosed = p.CloseMainWindow();
+                        bool hasClosed = false;
+                        if (p.ProcessName == "JT")
+                        {
+                            //特殊处理20190107
+                            p.Kill();
+                            hasClosed = true;
+                        }
+                        else
+                        {
+                            hasClosed = p.CloseMainWindow();
+                        }
+                      
                         return hasClosed;
                     }
                 }

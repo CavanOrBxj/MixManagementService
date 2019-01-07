@@ -95,6 +95,12 @@
       <DependentUpon>TipPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="EntityModule\Module.cs" />
+    <Compile Include="Layouts\JTEXEConfigLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Layouts\JTEXEConfigLayout.Designer.cs">
+      <DependentUpon>JTEXEConfigLayout.cs</DependentUpon>
+    </Compile>
     <Compile Include="Layouts\Universaldisplay.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmServiceSetup.resx">
       <DependentUpon>FrmServiceSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\JTEXEConfigLayout.resx">
+      <DependentUpon>JTEXEConfigLayout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Layouts\Universaldisplay.resx">
       <DependentUpon>Universaldisplay.cs</DependentUpon>

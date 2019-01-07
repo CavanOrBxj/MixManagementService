@@ -21,6 +21,8 @@ namespace MixManagementPlatform
 
         private Layouts.Universaldisplay pnluniversal;
 
+        private Layouts.JTEXEConfigLayout pnlJTEXE;//11
+
 
         public FormModuleConfig(Form form, int type, string path = null)
         {
@@ -116,6 +118,14 @@ namespace MixManagementPlatform
                     Controls.Add(pnluniversal);
                     Size = new Size(pnluniversal.Width, pnluniversal.Height + 115);
                     break;
+
+                case 11:
+                    pnlJTEXE = new Layouts.JTEXEConfigLayout(path);
+                    pnlJTEXE.Location = new Point(5, 45);
+                    pnlJTEXE.BackColor = Color.Transparent;
+                    Controls.Add(pnlJTEXE);
+                    Size = new Size(pnlJTEXE.Width + 15, pnlJTEXE.Height + 115);
+                    break;
             }
         }
 
@@ -133,7 +143,7 @@ namespace MixManagementPlatform
                     saveSuccessed = pnlCmdServer.SaveData();
                     break;
                 case 2:
-                    if (!pnlTomcat.ValidateData()) return;
+                   // if (!pnlTomcat.ValidateData()) return;
                     saveSuccessed = pnlTomcat.SaveData();
                     break;
                 case 3:
@@ -164,6 +174,11 @@ namespace MixManagementPlatform
                 case 9:
                 case 10:
                     saveSuccessed = true;
+                    break;
+
+                case 11:
+                   // if (!pnlJTEXE.ValidateData()) return;
+                    saveSuccessed = pnlJTEXE.SaveData();
                     break;
             }
             DialogResult = saveSuccessed ? DialogResult.OK : DialogResult.Ignore;

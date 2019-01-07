@@ -67,7 +67,6 @@
             this.btnAdd = new ControlAstro.Controls.CircleButton();
             this.btnAutoStart = new ControlAstro.Controls.CircleButton();
             this.lblError = new System.Windows.Forms.Label();
-            this.lblVersion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMix)).BeginInit();
             this.menuStripDgv.SuspendLayout();
             this.menuStrip.SuspendLayout();
@@ -474,25 +473,12 @@
             this.lblError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblError.Visible = false;
             // 
-            // lblVersion
-            // 
-            this.lblVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblVersion.AutoSize = true;
-            this.lblVersion.BackColor = System.Drawing.Color.Transparent;
-            this.lblVersion.Location = new System.Drawing.Point(982, 620);
-            this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(41, 12);
-            this.lblVersion.TabIndex = 36;
-            this.lblVersion.Text = "版本号";
-            this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1027, 636);
-            this.Controls.Add(this.lblVersion);
             this.Controls.Add(this.btnAutoStart);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDel);
@@ -557,7 +543,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnLoaction;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnArguments;
-        private System.Windows.Forms.Label lblVersion;
     }
 }
 

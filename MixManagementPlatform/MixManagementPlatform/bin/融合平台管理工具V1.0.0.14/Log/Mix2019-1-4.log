@@ -1,0 +1,19 @@
+Native library pre-loader is trying to load native SQLite library "E:\GitHub\MixManagementService\MixManagementPlatform\MixManagementPlatform\bin\融合平台管理工具V1.0.0.14\x64\SQLite.Interop.dll"...
+2019/1/4 17:00:08  SqlServerLogic(Exception)：sql语句执行错误:CREATE DATABASE volador
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 MixManagementPlatform.SqlManager.SqlServerLogic.FromSql(String sql) 位置 E:\GitHub\MixManagementService\MixManagementPlatform\MixManagementPlatform\SqlManager\SqlServerLogic.cs:行号 39
+2019/1/4 17:00:08  FormMain(Info)：volador数据库创建失败
+2019/1/4 17:00:08  SqlServerLogic(Exception)：执行sql脚本错误
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 MixManagementPlatform.SqlManager.SqlServerLogic.ExecuteCommand(ArrayList varSqlList) 位置 E:\GitHub\MixManagementService\MixManagementPlatform\MixManagementPlatform\SqlManager\SqlServerLogic.cs:行号 107
+2019/1/4 17:00:08  FormMain(Info)：volador表创建失败

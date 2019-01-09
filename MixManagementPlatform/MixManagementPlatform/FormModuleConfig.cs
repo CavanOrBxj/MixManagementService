@@ -23,6 +23,8 @@ namespace MixManagementPlatform
 
         private Layouts.JTEXEConfigLayout pnlJTEXE;//11
 
+        private Layouts.CCPlayerConfigLayout pnlCCPlayer;//12
+
 
         public FormModuleConfig(Form form, int type, string path = null)
         {
@@ -126,6 +128,15 @@ namespace MixManagementPlatform
                     Controls.Add(pnlJTEXE);
                     Size = new Size(pnlJTEXE.Width + 15, pnlJTEXE.Height + 115);
                     break;
+
+                case 12:
+                    pnlCCPlayer = new Layouts.CCPlayerConfigLayout(path);
+                    pnlCCPlayer.Location = new Point(5, 45);
+                    pnlCCPlayer.BackColor = Color.Transparent;
+                    Controls.Add(pnlCCPlayer);
+                    Size = new Size(pnlCCPlayer.Width + 15, pnlCCPlayer.Height + 115);
+                    break;
+
             }
         }
 
@@ -135,7 +146,7 @@ namespace MixManagementPlatform
             switch (type)
             {
                 case 0:
-                    if (!pnlTsSheduleCenter.ValidateData()) return;
+                   // if (!pnlTsSheduleCenter.ValidateData()) return;
                     saveSuccessed = pnlTsSheduleCenter.SaveData();
                     break;
                 case 1:
@@ -179,6 +190,11 @@ namespace MixManagementPlatform
                 case 11:
                    // if (!pnlJTEXE.ValidateData()) return;
                     saveSuccessed = pnlJTEXE.SaveData();
+                    break;
+
+                case 12:
+                    if (!pnlCCPlayer.ValidateData()) return;
+                    saveSuccessed = pnlCCPlayer.SaveData();
                     break;
             }
             DialogResult = saveSuccessed ? DialogResult.OK : DialogResult.Ignore;

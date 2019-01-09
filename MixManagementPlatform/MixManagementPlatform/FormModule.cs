@@ -181,6 +181,11 @@ namespace MixManagementPlatform
             dr["Value"] = 11;
             dt.Rows.Add(dr);
 
+            dr = dt.NewRow();
+            dr["Display"] = FormMain.ModuleType[12];
+            dr["Value"] = 12;
+            dt.Rows.Add(dr);
+
 
             box.DisplayMember = "Display";
             box.ValueMember = "Value";
@@ -244,6 +249,11 @@ namespace MixManagementPlatform
 
                     case 11:
                         textBoxName.Text = FormMain.ModuleType[11];
+                        textBoxArguments.Text = "";
+                        break;
+
+                    case 12:
+                        textBoxName.Text = FormMain.ModuleType[12];
                         textBoxArguments.Text = "";
                         break;
                 }

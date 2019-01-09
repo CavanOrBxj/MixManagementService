@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel = new System.Windows.Forms.Panel();
+            this.textSTUDIONO = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.textGBSTUDIONO = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
@@ -99,13 +101,19 @@
             this.textIP = new System.Windows.Forms.TextBox();
             this.lblPORT = new System.Windows.Forms.Label();
             this.lblIP = new System.Windows.Forms.Label();
-            this.textSTUDIONO = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtCCPlayHttpSerPort = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCCPlayHttpPath = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel
             // 
+            this.panel.Controls.Add(this.txtCCPlayHttpSerPort);
+            this.panel.Controls.Add(this.label3);
+            this.panel.Controls.Add(this.txtCCPlayHttpPath);
+            this.panel.Controls.Add(this.label4);
             this.panel.Controls.Add(this.textSTUDIONO);
             this.panel.Controls.Add(this.label2);
             this.panel.Controls.Add(this.textGBSTUDIONO);
@@ -180,13 +188,31 @@
             this.panel.Controls.Add(this.lblIP);
             this.panel.Location = new System.Drawing.Point(0, 0);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(399, 1298);
+            this.panel.Size = new System.Drawing.Size(399, 1251);
             this.panel.TabIndex = 0;
+            // 
+            // textSTUDIONO
+            // 
+            this.textSTUDIONO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textSTUDIONO.Location = new System.Drawing.Point(117, 1129);
+            this.textSTUDIONO.Name = "textSTUDIONO";
+            this.textSTUDIONO.Size = new System.Drawing.Size(264, 21);
+            this.textSTUDIONO.TabIndex = 164;
+            this.textSTUDIONO.Tag = "";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 1133);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.TabIndex = 165;
+            this.label2.Text = "IP平台号";
             // 
             // textGBSTUDIONO
             // 
             this.textGBSTUDIONO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textGBSTUDIONO.Location = new System.Drawing.Point(117, 1208);
+            this.textGBSTUDIONO.Location = new System.Drawing.Point(117, 1097);
             this.textGBSTUDIONO.Name = "textGBSTUDIONO";
             this.textGBSTUDIONO.Size = new System.Drawing.Size(264, 21);
             this.textGBSTUDIONO.TabIndex = 162;
@@ -195,7 +221,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 1212);
+            this.label1.Location = new System.Drawing.Point(13, 1101);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 12);
             this.label1.TabIndex = 163;
@@ -204,7 +230,7 @@
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(249, 1079);
+            this.lbl1.Location = new System.Drawing.Point(249, 968);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(11, 12);
             this.lbl1.TabIndex = 161;
@@ -213,7 +239,7 @@
             // separatorLineSys
             // 
             this.separatorLineSys.LineColor = System.Drawing.Color.Gray;
-            this.separatorLineSys.Location = new System.Drawing.Point(15, 780);
+            this.separatorLineSys.Location = new System.Drawing.Point(15, 679);
             this.separatorLineSys.Name = "separatorLineSys";
             this.separatorLineSys.Size = new System.Drawing.Size(379, 23);
             this.separatorLineSys.TabIndex = 160;
@@ -224,7 +250,7 @@
             // separatorLineSend
             // 
             this.separatorLineSend.LineColor = System.Drawing.Color.Gray;
-            this.separatorLineSend.Location = new System.Drawing.Point(15, 400);
+            this.separatorLineSend.Location = new System.Drawing.Point(15, 336);
             this.separatorLineSend.Name = "separatorLineSend";
             this.separatorLineSend.Size = new System.Drawing.Size(379, 23);
             this.separatorLineSend.TabIndex = 159;
@@ -235,7 +261,7 @@
             // separatorLineLocal
             // 
             this.separatorLineLocal.LineColor = System.Drawing.Color.Gray;
-            this.separatorLineLocal.Location = new System.Drawing.Point(15, 182);
+            this.separatorLineLocal.Location = new System.Drawing.Point(15, 156);
             this.separatorLineLocal.Name = "separatorLineLocal";
             this.separatorLineLocal.Size = new System.Drawing.Size(379, 23);
             this.separatorLineLocal.TabIndex = 158;
@@ -257,7 +283,7 @@
             // lblServerName
             // 
             this.lblServerName.AutoSize = true;
-            this.lblServerName.Location = new System.Drawing.Point(34, 41);
+            this.lblServerName.Location = new System.Drawing.Point(13, 41);
             this.lblServerName.Name = "lblServerName";
             this.lblServerName.Size = new System.Drawing.Size(41, 12);
             this.lblServerName.TabIndex = 112;
@@ -266,7 +292,7 @@
             // lblDataBase
             // 
             this.lblDataBase.AutoSize = true;
-            this.lblDataBase.Location = new System.Drawing.Point(34, 72);
+            this.lblDataBase.Location = new System.Drawing.Point(13, 72);
             this.lblDataBase.Name = "lblDataBase";
             this.lblDataBase.Size = new System.Drawing.Size(41, 12);
             this.lblDataBase.TabIndex = 113;
@@ -286,7 +312,7 @@
             this.cbBoxMICROMODE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBoxMICROMODE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbBoxMICROMODE.FormattingEnabled = true;
-            this.cbBoxMICROMODE.Location = new System.Drawing.Point(118, 819);
+            this.cbBoxMICROMODE.Location = new System.Drawing.Point(118, 708);
             this.cbBoxMICROMODE.Name = "cbBoxMICROMODE";
             this.cbBoxMICROMODE.Size = new System.Drawing.Size(263, 20);
             this.cbBoxMICROMODE.TabIndex = 156;
@@ -303,7 +329,7 @@
             // textLOCALPATH
             // 
             this.textLOCALPATH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textLOCALPATH.Location = new System.Drawing.Point(117, 1110);
+            this.textLOCALPATH.Location = new System.Drawing.Point(117, 999);
             this.textLOCALPATH.Name = "textLOCALPATH";
             this.textLOCALPATH.Size = new System.Drawing.Size(264, 21);
             this.textLOCALPATH.TabIndex = 150;
@@ -312,7 +338,7 @@
             // lblLogID
             // 
             this.lblLogID.AutoSize = true;
-            this.lblLogID.Location = new System.Drawing.Point(34, 103);
+            this.lblLogID.Location = new System.Drawing.Point(13, 103);
             this.lblLogID.Name = "lblLogID";
             this.lblLogID.Size = new System.Drawing.Size(41, 12);
             this.lblLogID.TabIndex = 114;
@@ -321,7 +347,7 @@
             // lblLOCALPATH
             // 
             this.lblLOCALPATH.AutoSize = true;
-            this.lblLOCALPATH.Location = new System.Drawing.Point(34, 1116);
+            this.lblLOCALPATH.Location = new System.Drawing.Point(13, 1005);
             this.lblLOCALPATH.Name = "lblLOCALPATH";
             this.lblLOCALPATH.Size = new System.Drawing.Size(71, 12);
             this.lblLOCALPATH.TabIndex = 155;
@@ -330,7 +356,7 @@
             // lblLogPass
             // 
             this.lblLogPass.AutoSize = true;
-            this.lblLogPass.Location = new System.Drawing.Point(34, 136);
+            this.lblLogPass.Location = new System.Drawing.Point(13, 136);
             this.lblLogPass.Name = "lblLogPass";
             this.lblLogPass.Size = new System.Drawing.Size(53, 12);
             this.lblLogPass.TabIndex = 115;
@@ -348,7 +374,7 @@
             // textLEDtxtLenth
             // 
             this.textLEDtxtLenth.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textLEDtxtLenth.Location = new System.Drawing.Point(117, 1176);
+            this.textLEDtxtLenth.Location = new System.Drawing.Point(117, 1065);
             this.textLEDtxtLenth.Name = "textLEDtxtLenth";
             this.textLEDtxtLenth.Size = new System.Drawing.Size(264, 21);
             this.textLEDtxtLenth.TabIndex = 152;
@@ -366,7 +392,7 @@
             // lblLEDtxtLenth
             // 
             this.lblLEDtxtLenth.AutoSize = true;
-            this.lblLEDtxtLenth.Location = new System.Drawing.Point(34, 1180);
+            this.lblLEDtxtLenth.Location = new System.Drawing.Point(13, 1069);
             this.lblLEDtxtLenth.Name = "lblLEDtxtLenth";
             this.lblLEDtxtLenth.Size = new System.Drawing.Size(71, 12);
             this.lblLEDtxtLenth.TabIndex = 154;
@@ -375,7 +401,7 @@
             // textURLPATH
             // 
             this.textURLPATH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textURLPATH.Location = new System.Drawing.Point(117, 1143);
+            this.textURLPATH.Location = new System.Drawing.Point(117, 1032);
             this.textURLPATH.Name = "textURLPATH";
             this.textURLPATH.Size = new System.Drawing.Size(264, 21);
             this.textURLPATH.TabIndex = 151;
@@ -384,7 +410,7 @@
             // lblURLPATH
             // 
             this.lblURLPATH.AutoSize = true;
-            this.lblURLPATH.Location = new System.Drawing.Point(30, 1147);
+            this.lblURLPATH.Location = new System.Drawing.Point(9, 1036);
             this.lblURLPATH.Name = "lblURLPATH";
             this.lblURLPATH.Size = new System.Drawing.Size(89, 12);
             this.lblURLPATH.TabIndex = 153;
@@ -393,7 +419,7 @@
             // textAmTimeOut
             // 
             this.textAmTimeOut.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textAmTimeOut.Location = new System.Drawing.Point(117, 1043);
+            this.textAmTimeOut.Location = new System.Drawing.Point(117, 932);
             this.textAmTimeOut.Name = "textAmTimeOut";
             this.textAmTimeOut.Size = new System.Drawing.Size(264, 21);
             this.textAmTimeOut.TabIndex = 137;
@@ -402,7 +428,7 @@
             // lblAmTimeOut
             // 
             this.lblAmTimeOut.AutoSize = true;
-            this.lblAmTimeOut.Location = new System.Drawing.Point(34, 1049);
+            this.lblAmTimeOut.Location = new System.Drawing.Point(13, 938);
             this.lblAmTimeOut.Name = "lblAmTimeOut";
             this.lblAmTimeOut.Size = new System.Drawing.Size(77, 12);
             this.lblAmTimeOut.TabIndex = 149;
@@ -411,7 +437,7 @@
             // textCCPlayPath
             // 
             this.textCCPlayPath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textCCPlayPath.Location = new System.Drawing.Point(117, 1010);
+            this.textCCPlayPath.Location = new System.Drawing.Point(117, 899);
             this.textCCPlayPath.Name = "textCCPlayPath";
             this.textCCPlayPath.Size = new System.Drawing.Size(264, 21);
             this.textCCPlayPath.TabIndex = 136;
@@ -420,7 +446,7 @@
             // lblCCPlayPath
             // 
             this.lblCCPlayPath.AutoSize = true;
-            this.lblCCPlayPath.Location = new System.Drawing.Point(34, 1016);
+            this.lblCCPlayPath.Location = new System.Drawing.Point(13, 905);
             this.lblCCPlayPath.Name = "lblCCPlayPath";
             this.lblCCPlayPath.Size = new System.Drawing.Size(65, 12);
             this.lblCCPlayPath.TabIndex = 148;
@@ -429,7 +455,7 @@
             // textPORTH
             // 
             this.textPORTH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textPORTH.Location = new System.Drawing.Point(269, 1074);
+            this.textPORTH.Location = new System.Drawing.Point(269, 963);
             this.textPORTH.Name = "textPORTH";
             this.textPORTH.Size = new System.Drawing.Size(113, 21);
             this.textPORTH.TabIndex = 139;
@@ -438,7 +464,7 @@
             // textPORTL
             // 
             this.textPORTL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textPORTL.Location = new System.Drawing.Point(117, 1076);
+            this.textPORTL.Location = new System.Drawing.Point(117, 965);
             this.textPORTL.Name = "textPORTL";
             this.textPORTL.Size = new System.Drawing.Size(123, 21);
             this.textPORTL.TabIndex = 138;
@@ -447,7 +473,7 @@
             // textSwitchFreq
             // 
             this.textSwitchFreq.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textSwitchFreq.Location = new System.Drawing.Point(117, 978);
+            this.textSwitchFreq.Location = new System.Drawing.Point(117, 867);
             this.textSwitchFreq.Name = "textSwitchFreq";
             this.textSwitchFreq.Size = new System.Drawing.Size(264, 21);
             this.textSwitchFreq.TabIndex = 135;
@@ -456,7 +482,7 @@
             // lblPORTL
             // 
             this.lblPORTL.AutoSize = true;
-            this.lblPORTL.Location = new System.Drawing.Point(34, 1082);
+            this.lblPORTL.Location = new System.Drawing.Point(13, 971);
             this.lblPORTL.Name = "lblPORTL";
             this.lblPORTL.Size = new System.Drawing.Size(53, 12);
             this.lblPORTL.TabIndex = 146;
@@ -465,7 +491,7 @@
             // lblSwitchFreq
             // 
             this.lblSwitchFreq.AutoSize = true;
-            this.lblSwitchFreq.Location = new System.Drawing.Point(34, 984);
+            this.lblSwitchFreq.Location = new System.Drawing.Point(13, 873);
             this.lblSwitchFreq.Name = "lblSwitchFreq";
             this.lblSwitchFreq.Size = new System.Drawing.Size(53, 12);
             this.lblSwitchFreq.TabIndex = 145;
@@ -474,7 +500,7 @@
             // textURL
             // 
             this.textURL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textURL.Location = new System.Drawing.Point(117, 946);
+            this.textURL.Location = new System.Drawing.Point(117, 835);
             this.textURL.Name = "textURL";
             this.textURL.Size = new System.Drawing.Size(264, 21);
             this.textURL.TabIndex = 134;
@@ -483,7 +509,7 @@
             // lblURL
             // 
             this.lblURL.AutoSize = true;
-            this.lblURL.Location = new System.Drawing.Point(34, 951);
+            this.lblURL.Location = new System.Drawing.Point(13, 840);
             this.lblURL.Name = "lblURL";
             this.lblURL.Size = new System.Drawing.Size(71, 12);
             this.lblURL.TabIndex = 144;
@@ -492,7 +518,7 @@
             // textMULTIPLEXERPORT
             // 
             this.textMULTIPLEXERPORT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textMULTIPLEXERPORT.Location = new System.Drawing.Point(117, 913);
+            this.textMULTIPLEXERPORT.Location = new System.Drawing.Point(117, 802);
             this.textMULTIPLEXERPORT.Name = "textMULTIPLEXERPORT";
             this.textMULTIPLEXERPORT.Size = new System.Drawing.Size(264, 21);
             this.textMULTIPLEXERPORT.TabIndex = 133;
@@ -501,7 +527,7 @@
             // textMULTIPLEXERIP
             // 
             this.textMULTIPLEXERIP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textMULTIPLEXERIP.Location = new System.Drawing.Point(117, 880);
+            this.textMULTIPLEXERIP.Location = new System.Drawing.Point(117, 769);
             this.textMULTIPLEXERIP.Name = "textMULTIPLEXERIP";
             this.textMULTIPLEXERIP.Size = new System.Drawing.Size(264, 21);
             this.textMULTIPLEXERIP.TabIndex = 132;
@@ -510,7 +536,7 @@
             // lblMULTIPLEXERPORT
             // 
             this.lblMULTIPLEXERPORT.AutoSize = true;
-            this.lblMULTIPLEXERPORT.Location = new System.Drawing.Point(34, 918);
+            this.lblMULTIPLEXERPORT.Location = new System.Drawing.Point(13, 807);
             this.lblMULTIPLEXERPORT.Name = "lblMULTIPLEXERPORT";
             this.lblMULTIPLEXERPORT.Size = new System.Drawing.Size(65, 12);
             this.lblMULTIPLEXERPORT.TabIndex = 143;
@@ -519,7 +545,7 @@
             // lblMULTIPLEXERIP
             // 
             this.lblMULTIPLEXERIP.AutoSize = true;
-            this.lblMULTIPLEXERIP.Location = new System.Drawing.Point(34, 886);
+            this.lblMULTIPLEXERIP.Location = new System.Drawing.Point(13, 775);
             this.lblMULTIPLEXERIP.Name = "lblMULTIPLEXERIP";
             this.lblMULTIPLEXERIP.Size = new System.Drawing.Size(53, 12);
             this.lblMULTIPLEXERIP.TabIndex = 142;
@@ -528,7 +554,7 @@
             // textMULTIPLEXERFLAG
             // 
             this.textMULTIPLEXERFLAG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textMULTIPLEXERFLAG.Location = new System.Drawing.Point(117, 849);
+            this.textMULTIPLEXERFLAG.Location = new System.Drawing.Point(117, 738);
             this.textMULTIPLEXERFLAG.Name = "textMULTIPLEXERFLAG";
             this.textMULTIPLEXERFLAG.Size = new System.Drawing.Size(264, 21);
             this.textMULTIPLEXERFLAG.TabIndex = 131;
@@ -537,7 +563,7 @@
             // lblMULTIPLEXERFLAG
             // 
             this.lblMULTIPLEXERFLAG.AutoSize = true;
-            this.lblMULTIPLEXERFLAG.Location = new System.Drawing.Point(34, 855);
+            this.lblMULTIPLEXERFLAG.Location = new System.Drawing.Point(13, 744);
             this.lblMULTIPLEXERFLAG.Name = "lblMULTIPLEXERFLAG";
             this.lblMULTIPLEXERFLAG.Size = new System.Drawing.Size(41, 12);
             this.lblMULTIPLEXERFLAG.TabIndex = 141;
@@ -546,7 +572,7 @@
             // lblMICROMODE
             // 
             this.lblMICROMODE.AutoSize = true;
-            this.lblMICROMODE.Location = new System.Drawing.Point(34, 824);
+            this.lblMICROMODE.Location = new System.Drawing.Point(13, 713);
             this.lblMICROMODE.Name = "lblMICROMODE";
             this.lblMICROMODE.Size = new System.Drawing.Size(53, 12);
             this.lblMICROMODE.TabIndex = 140;
@@ -555,7 +581,7 @@
             // textMQPWD
             // 
             this.textMQPWD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textMQPWD.Location = new System.Drawing.Point(118, 658);
+            this.textMQPWD.Location = new System.Drawing.Point(118, 589);
             this.textMQPWD.Name = "textMQPWD";
             this.textMQPWD.Size = new System.Drawing.Size(264, 21);
             this.textMQPWD.TabIndex = 109;
@@ -564,7 +590,7 @@
             // lblMQPWD
             // 
             this.lblMQPWD.AutoSize = true;
-            this.lblMQPWD.Location = new System.Drawing.Point(34, 662);
+            this.lblMQPWD.Location = new System.Drawing.Point(13, 593);
             this.lblMQPWD.Name = "lblMQPWD";
             this.lblMQPWD.Size = new System.Drawing.Size(41, 12);
             this.lblMQPWD.TabIndex = 130;
@@ -573,7 +599,7 @@
             // textMQUSER
             // 
             this.textMQUSER.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textMQUSER.Location = new System.Drawing.Point(118, 625);
+            this.textMQUSER.Location = new System.Drawing.Point(118, 556);
             this.textMQUSER.Name = "textMQUSER";
             this.textMQUSER.Size = new System.Drawing.Size(264, 21);
             this.textMQUSER.TabIndex = 108;
@@ -582,7 +608,7 @@
             // lblMQUSER
             // 
             this.lblMQUSER.AutoSize = true;
-            this.lblMQUSER.Location = new System.Drawing.Point(34, 629);
+            this.lblMQUSER.Location = new System.Drawing.Point(13, 560);
             this.lblMQUSER.Name = "lblMQUSER";
             this.lblMQUSER.Size = new System.Drawing.Size(53, 12);
             this.lblMQUSER.TabIndex = 129;
@@ -591,7 +617,7 @@
             // textSENDTOPIC
             // 
             this.textSENDTOPIC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textSENDTOPIC.Location = new System.Drawing.Point(118, 724);
+            this.textSENDTOPIC.Location = new System.Drawing.Point(118, 655);
             this.textSENDTOPIC.Name = "textSENDTOPIC";
             this.textSENDTOPIC.Size = new System.Drawing.Size(264, 21);
             this.textSENDTOPIC.TabIndex = 111;
@@ -600,7 +626,7 @@
             // lblSENDTOPIC
             // 
             this.lblSENDTOPIC.AutoSize = true;
-            this.lblSENDTOPIC.Location = new System.Drawing.Point(34, 728);
+            this.lblSENDTOPIC.Location = new System.Drawing.Point(13, 659);
             this.lblSENDTOPIC.Name = "lblSENDTOPIC";
             this.lblSENDTOPIC.Size = new System.Drawing.Size(59, 12);
             this.lblSENDTOPIC.TabIndex = 128;
@@ -609,7 +635,7 @@
             // textRECTOPIC
             // 
             this.textRECTOPIC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textRECTOPIC.Location = new System.Drawing.Point(118, 691);
+            this.textRECTOPIC.Location = new System.Drawing.Point(118, 622);
             this.textRECTOPIC.Name = "textRECTOPIC";
             this.textRECTOPIC.Size = new System.Drawing.Size(264, 21);
             this.textRECTOPIC.TabIndex = 110;
@@ -618,7 +644,7 @@
             // textMQPORT
             // 
             this.textMQPORT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textMQPORT.Location = new System.Drawing.Point(118, 593);
+            this.textMQPORT.Location = new System.Drawing.Point(118, 524);
             this.textMQPORT.Name = "textMQPORT";
             this.textMQPORT.Size = new System.Drawing.Size(264, 21);
             this.textMQPORT.TabIndex = 107;
@@ -627,7 +653,7 @@
             // lblRECTOPIC
             // 
             this.lblRECTOPIC.AutoSize = true;
-            this.lblRECTOPIC.Location = new System.Drawing.Point(34, 695);
+            this.lblRECTOPIC.Location = new System.Drawing.Point(13, 626);
             this.lblRECTOPIC.Name = "lblRECTOPIC";
             this.lblRECTOPIC.Size = new System.Drawing.Size(59, 12);
             this.lblRECTOPIC.TabIndex = 127;
@@ -636,7 +662,7 @@
             // lblMQPORT
             // 
             this.lblMQPORT.AutoSize = true;
-            this.lblMQPORT.Location = new System.Drawing.Point(34, 597);
+            this.lblMQPORT.Location = new System.Drawing.Point(13, 528);
             this.lblMQPORT.Name = "lblMQPORT";
             this.lblMQPORT.Size = new System.Drawing.Size(41, 12);
             this.lblMQPORT.TabIndex = 126;
@@ -645,7 +671,7 @@
             // textMQIP
             // 
             this.textMQIP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textMQIP.Location = new System.Drawing.Point(118, 561);
+            this.textMQIP.Location = new System.Drawing.Point(118, 492);
             this.textMQIP.Name = "textMQIP";
             this.textMQIP.Size = new System.Drawing.Size(264, 21);
             this.textMQIP.TabIndex = 106;
@@ -654,7 +680,7 @@
             // lblMQIP
             // 
             this.lblMQIP.AutoSize = true;
-            this.lblMQIP.Location = new System.Drawing.Point(34, 565);
+            this.lblMQIP.Location = new System.Drawing.Point(13, 496);
             this.lblMQIP.Name = "lblMQIP";
             this.lblMQIP.Size = new System.Drawing.Size(65, 12);
             this.lblMQIP.TabIndex = 125;
@@ -663,7 +689,7 @@
             // textCATIMES
             // 
             this.textCATIMES.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textCATIMES.Location = new System.Drawing.Point(118, 528);
+            this.textCATIMES.Location = new System.Drawing.Point(118, 459);
             this.textCATIMES.Name = "textCATIMES";
             this.textCATIMES.Size = new System.Drawing.Size(264, 21);
             this.textCATIMES.TabIndex = 105;
@@ -672,7 +698,7 @@
             // textCAGAP
             // 
             this.textCAGAP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textCAGAP.Location = new System.Drawing.Point(118, 495);
+            this.textCAGAP.Location = new System.Drawing.Point(118, 426);
             this.textCAGAP.Name = "textCAGAP";
             this.textCAGAP.Size = new System.Drawing.Size(264, 21);
             this.textCAGAP.TabIndex = 104;
@@ -681,7 +707,7 @@
             // lblCATIMES
             // 
             this.lblCATIMES.AutoSize = true;
-            this.lblCATIMES.Location = new System.Drawing.Point(34, 532);
+            this.lblCATIMES.Location = new System.Drawing.Point(13, 463);
             this.lblCATIMES.Name = "lblCATIMES";
             this.lblCATIMES.Size = new System.Drawing.Size(53, 12);
             this.lblCATIMES.TabIndex = 124;
@@ -690,7 +716,7 @@
             // lblCAGAP
             // 
             this.lblCAGAP.AutoSize = true;
-            this.lblCAGAP.Location = new System.Drawing.Point(34, 499);
+            this.lblCAGAP.Location = new System.Drawing.Point(13, 430);
             this.lblCAGAP.Name = "lblCAGAP";
             this.lblCAGAP.Size = new System.Drawing.Size(53, 12);
             this.lblCAGAP.TabIndex = 123;
@@ -699,7 +725,7 @@
             // textCAPORT
             // 
             this.textCAPORT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textCAPORT.Location = new System.Drawing.Point(118, 464);
+            this.textCAPORT.Location = new System.Drawing.Point(118, 395);
             this.textCAPORT.Name = "textCAPORT";
             this.textCAPORT.Size = new System.Drawing.Size(264, 21);
             this.textCAPORT.TabIndex = 103;
@@ -708,7 +734,7 @@
             // textCAIP
             // 
             this.textCAIP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textCAIP.Location = new System.Drawing.Point(118, 433);
+            this.textCAIP.Location = new System.Drawing.Point(118, 364);
             this.textCAIP.Name = "textCAIP";
             this.textCAIP.Size = new System.Drawing.Size(264, 21);
             this.textCAIP.TabIndex = 102;
@@ -717,7 +743,7 @@
             // lblCAPORT
             // 
             this.lblCAPORT.AutoSize = true;
-            this.lblCAPORT.Location = new System.Drawing.Point(34, 468);
+            this.lblCAPORT.Location = new System.Drawing.Point(13, 399);
             this.lblCAPORT.Name = "lblCAPORT";
             this.lblCAPORT.Size = new System.Drawing.Size(53, 12);
             this.lblCAPORT.TabIndex = 122;
@@ -726,7 +752,7 @@
             // lblCAIP
             // 
             this.lblCAIP.AutoSize = true;
-            this.lblCAIP.Location = new System.Drawing.Point(34, 437);
+            this.lblCAIP.Location = new System.Drawing.Point(13, 368);
             this.lblCAIP.Name = "lblCAIP";
             this.lblCAIP.Size = new System.Drawing.Size(65, 12);
             this.lblCAIP.TabIndex = 121;
@@ -735,7 +761,7 @@
             // textRTSPPORT
             // 
             this.textRTSPPORT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textRTSPPORT.Location = new System.Drawing.Point(118, 344);
+            this.textRTSPPORT.Location = new System.Drawing.Point(118, 313);
             this.textRTSPPORT.Name = "textRTSPPORT";
             this.textRTSPPORT.Size = new System.Drawing.Size(264, 21);
             this.textRTSPPORT.TabIndex = 101;
@@ -744,7 +770,7 @@
             // lblRTSPPORT
             // 
             this.lblRTSPPORT.AutoSize = true;
-            this.lblRTSPPORT.Location = new System.Drawing.Point(34, 348);
+            this.lblRTSPPORT.Location = new System.Drawing.Point(13, 317);
             this.lblRTSPPORT.Name = "lblRTSPPORT";
             this.lblRTSPPORT.Size = new System.Drawing.Size(53, 12);
             this.lblRTSPPORT.TabIndex = 120;
@@ -753,7 +779,7 @@
             // textMicroRecPORT
             // 
             this.textMicroRecPORT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textMicroRecPORT.Location = new System.Drawing.Point(118, 311);
+            this.textMicroRecPORT.Location = new System.Drawing.Point(118, 280);
             this.textMicroRecPORT.Name = "textMicroRecPORT";
             this.textMicroRecPORT.Size = new System.Drawing.Size(264, 21);
             this.textMicroRecPORT.TabIndex = 100;
@@ -762,7 +788,7 @@
             // textMicroPORT
             // 
             this.textMicroPORT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textMicroPORT.Location = new System.Drawing.Point(118, 278);
+            this.textMicroPORT.Location = new System.Drawing.Point(118, 247);
             this.textMicroPORT.Name = "textMicroPORT";
             this.textMicroPORT.Size = new System.Drawing.Size(264, 21);
             this.textMicroPORT.TabIndex = 99;
@@ -771,7 +797,7 @@
             // lblMicroRecPORT
             // 
             this.lblMicroRecPORT.AutoSize = true;
-            this.lblMicroRecPORT.Location = new System.Drawing.Point(34, 315);
+            this.lblMicroRecPORT.Location = new System.Drawing.Point(13, 284);
             this.lblMicroRecPORT.Name = "lblMicroRecPORT";
             this.lblMicroRecPORT.Size = new System.Drawing.Size(77, 12);
             this.lblMicroRecPORT.TabIndex = 119;
@@ -780,7 +806,7 @@
             // lblMicroPORT
             // 
             this.lblMicroPORT.AutoSize = true;
-            this.lblMicroPORT.Location = new System.Drawing.Point(34, 282);
+            this.lblMicroPORT.Location = new System.Drawing.Point(13, 251);
             this.lblMicroPORT.Name = "lblMicroPORT";
             this.lblMicroPORT.Size = new System.Drawing.Size(77, 12);
             this.lblMicroPORT.TabIndex = 118;
@@ -789,7 +815,7 @@
             // textPORT
             // 
             this.textPORT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textPORT.Location = new System.Drawing.Point(118, 243);
+            this.textPORT.Location = new System.Drawing.Point(118, 212);
             this.textPORT.Name = "textPORT";
             this.textPORT.Size = new System.Drawing.Size(264, 21);
             this.textPORT.TabIndex = 98;
@@ -798,7 +824,7 @@
             // textIP
             // 
             this.textIP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textIP.Location = new System.Drawing.Point(118, 212);
+            this.textIP.Location = new System.Drawing.Point(118, 181);
             this.textIP.Name = "textIP";
             this.textIP.Size = new System.Drawing.Size(264, 21);
             this.textIP.TabIndex = 97;
@@ -807,7 +833,7 @@
             // lblPORT
             // 
             this.lblPORT.AutoSize = true;
-            this.lblPORT.Location = new System.Drawing.Point(34, 247);
+            this.lblPORT.Location = new System.Drawing.Point(13, 216);
             this.lblPORT.Name = "lblPORT";
             this.lblPORT.Size = new System.Drawing.Size(77, 12);
             this.lblPORT.TabIndex = 117;
@@ -816,29 +842,47 @@
             // lblIP
             // 
             this.lblIP.AutoSize = true;
-            this.lblIP.Location = new System.Drawing.Point(34, 216);
+            this.lblIP.Location = new System.Drawing.Point(13, 185);
             this.lblIP.Name = "lblIP";
             this.lblIP.Size = new System.Drawing.Size(41, 12);
             this.lblIP.TabIndex = 116;
             this.lblIP.Text = "本机IP";
             // 
-            // textSTUDIONO
+            // txtCCPlayHttpSerPort
             // 
-            this.textSTUDIONO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textSTUDIONO.Location = new System.Drawing.Point(117, 1240);
-            this.textSTUDIONO.Name = "textSTUDIONO";
-            this.textSTUDIONO.Size = new System.Drawing.Size(264, 21);
-            this.textSTUDIONO.TabIndex = 164;
-            this.textSTUDIONO.Tag = "";
+            this.txtCCPlayHttpSerPort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCCPlayHttpSerPort.Location = new System.Drawing.Point(117, 1194);
+            this.txtCCPlayHttpSerPort.Name = "txtCCPlayHttpSerPort";
+            this.txtCCPlayHttpSerPort.Size = new System.Drawing.Size(264, 21);
+            this.txtCCPlayHttpSerPort.TabIndex = 168;
+            this.txtCCPlayHttpSerPort.Tag = "";
             // 
-            // label2
+            // label3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 1244);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
-            this.label2.TabIndex = 165;
-            this.label2.Text = "IP平台号";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 1198);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 12);
+            this.label3.TabIndex = 169;
+            this.label3.Text = "HTTP推流完成端口";
+            // 
+            // txtCCPlayHttpPath
+            // 
+            this.txtCCPlayHttpPath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCCPlayHttpPath.Location = new System.Drawing.Point(117, 1162);
+            this.txtCCPlayHttpPath.Name = "txtCCPlayHttpPath";
+            this.txtCCPlayHttpPath.Size = new System.Drawing.Size(264, 21);
+            this.txtCCPlayHttpPath.TabIndex = 166;
+            this.txtCCPlayHttpPath.Tag = "";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 1166);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 12);
+            this.label4.TabIndex = 167;
+            this.label4.Text = "Http推流地址";
             // 
             // TsSheduleCenterConfigLayout
             // 
@@ -849,7 +893,7 @@
             this.Controls.Add(this.panel);
             this.DoubleBuffered = true;
             this.Name = "TsSheduleCenterConfigLayout";
-            this.Size = new System.Drawing.Size(348, 750);
+            this.Size = new System.Drawing.Size(331, 733);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             this.ResumeLayout(false);
@@ -931,5 +975,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textSTUDIONO;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtCCPlayHttpSerPort;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtCCPlayHttpPath;
+        private System.Windows.Forms.Label label4;
     }
 }

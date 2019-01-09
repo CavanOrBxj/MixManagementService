@@ -95,6 +95,12 @@
       <DependentUpon>TipPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="EntityModule\Module.cs" />
+    <Compile Include="Layouts\CCPlayerConfigLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Layouts\CCPlayerConfigLayout.Designer.cs">
+      <DependentUpon>CCPlayerConfigLayout.cs</DependentUpon>
+    </Compile>
     <Compile Include="Layouts\JTEXEConfigLayout.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -231,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmServiceSetup.resx">
       <DependentUpon>FrmServiceSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\CCPlayerConfigLayout.resx">
+      <DependentUpon>CCPlayerConfigLayout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Layouts\JTEXEConfigLayout.resx">
       <DependentUpon>JTEXEConfigLayout.cs</DependentUpon>

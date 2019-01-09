@@ -81,6 +81,9 @@ namespace MixManagementPlatform.Layouts
 
 
                 textLEDtxtLenth.Text = iniFile.ReadString("LED", "LEDtxtLenth", "");
+
+                txtCCPlayHttpPath.Text = iniFile.ReadString("SYSSET", "CCPlayHttpPath", "");
+                txtCCPlayHttpSerPort.Text = iniFile.ReadString("SYSSET", "CCPlayHttpSerPort", "");
             }
             catch (Exception e)
             {
@@ -134,6 +137,9 @@ namespace MixManagementPlatform.Layouts
 
 
                 iniFile.WriteString("LED", "LEDtxtLenth", textLEDtxtLenth.Text);
+
+                iniFile.WriteString("SYSSET", "CCPlayHttpPath", txtCCPlayHttpPath.Text);
+                iniFile.WriteString("SYSSET", "CCPlayHttpSerPort", txtCCPlayHttpSerPort.Text);
                 return true;
             }
             catch

@@ -125,3 +125,4 @@ E:\GitHub\MixManagementService\MixManagementPlatform\MixManagementPlatform\obj\D
 E:\GitHub\MixManagementService\MixManagementPlatform\MixManagementPlatform\obj\Debug\MixManagementPlatform.csproj.CoreCompileInputs.cache
 E:\GitHub\MixManagementService\MixManagementPlatform\MixManagementPlatform\obj\Debug\MixManagementPlatform.csproj.CopyComplete
 E:\GitHub\MixManagementService\MixManagementPlatform\MixManagementPlatform\obj\Debug\MixManagementPlatform.Layouts.JTEXEConfigLayout.resources
+E:\GitHub\MixManagementService\MixManagementPlatform\MixManagementPlatform\obj\Debug\MixManagementPlatform.Layouts.CCPlayerConfigLayout.resources
